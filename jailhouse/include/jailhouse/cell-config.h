@@ -344,7 +344,7 @@ struct jailhouse_pio {
 /**
  * Memguard total number of PMU Interrupts (one for each CPU).
  */
-#define JAILHOUSE_MAX_PMU2CPU_IRQ	8
+#define JAILHOUSE_MAX_PMU2CPU_IRQ	12
 
 /**
  * Memguard platform support.
