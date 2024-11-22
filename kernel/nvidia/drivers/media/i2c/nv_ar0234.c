@@ -75,7 +75,7 @@ static const u32 ctrl_cid_list[] = {
 	TEGRA_CAMERA_CID_ALTERNATING_EXPOSURE,
 };
 
-const u16 alternating_exposure_cfg_size = sizeof(struct alternating_exposure_cfg);
+static const u16 alternating_exposure_cfg_size = sizeof(struct alternating_exposure_cfg);
 
 // Coefficients as per distortion model (wide FOV) being used
 typedef struct

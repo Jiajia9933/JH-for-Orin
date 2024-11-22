@@ -84,7 +84,7 @@ static const u32 ctrl_cid_list[] = {
 	TEGRA_CAMERA_CID_ALTERNATING_EXPOSURE,
 };
 
-const u16 alternating_exposure_cfg_size = sizeof(struct alternating_exposure_cfg);
+static const u16 alternating_exposure_cfg_size = sizeof(struct alternating_exposure_cfg);
 
 // Coefficients as per distortion model (wide FOV) being used
 typedef struct
@@ -1654,7 +1654,7 @@ static int ar0234_probe(struct i2c_client *client,
 		goto un_register;
 	}
 	msleep(100);
-	
+
 	/* Deser/ser programming */
 	err = ar0234_hawk_owl_deser_ser_program(priv);
 	if (err) {

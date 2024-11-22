@@ -503,6 +503,15 @@ SYM_FUNC_START(el2_setup)
 1:	mov_q	x0, (SCTLR_EL2_RES1 | ENDIAN_SET_EL2)
 	msr	sctlr_el2, x0
 
+	/*
+	 * Set ACTLR extra bits: ACTLREN + ECTLREN, CLUSTERPMUEN + SMEN + TSIDEN
+	 * This grants EL1 access to the DSU PMU and cluster registers.
+	 */
+	mov_q	x0, (0x0001 | 0x0002 | 0x0400 | 0x0800 | 0x1000)
+	mrs	x2, actlr_el2
+	orr	x0, x2, x0
+	msr	actlr_el2, x0
+
 #ifdef CONFIG_ARM64_VHE
 	/*
 	 * Check for VHE being present. For the rest of the EL2 setup,
