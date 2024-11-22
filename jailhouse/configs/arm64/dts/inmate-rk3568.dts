@@ -1,0 +1,252 @@
+/* SPDX-License-Identifier: GPL-2.0 */
+/*
+ * Jailhouse, a Linux-based partitioning hypervisor
+ *
+ * Configuration for RK3566 and RK3568 SoCs
+ *
+ * Copyright (c) 2024 Minerva Systems
+ *
+ * Authors:
+ *  Alex Zuepke <alex.zuepke@minervasys.tech>
+ *
+ * This work is licensed under the terms of the GNU GPL, version 2.
+ * See the COPYING file in the top-level directory.
+ *
+ * Linux guest cell.
+ *
+ * We configure the kernel to use all cores that are enabled in the cell config.
+ *
+ * We'll use UART8 as output, so you have to enable it in the root cell's DTB:
+ *   &uart8 {
+ *     status = "okay";
+ *   };
+ *
+ * Change here and the root cell DTB accordingly to activate the other serials.
+ */
+
+/dts-v1/;
+
+#include <dt-bindings/interrupt-controller/arm-gic.h>
+
+/ {
+	model = "Jailhouse cell on RK3568";
+	interrupt-parent = <&gic>;
+	#address-cells = <2>;
+	#size-cells = <2>;
+
+	aliases {
+		serial1 = &uart8;
+	};
+
+	chosen {
+		stdout-path = "serial1:1500000n8";
+	};
+
+	hypervisor {
+		compatible = "jailhouse,cell";
+	};
+
+	cpus {
+		#address-cells = <2>;
+		#size-cells = <0>;
+
+		cpu0: cpu@0 {
+			device_type = "cpu";
+			compatible = "arm,cortex-a55";
+			reg = <0x0 0x0>;
+			#cooling-cells = <2>;
+			enable-method = "psci";
+		};
+
+		cpu1: cpu@100 {
+			device_type = "cpu";
+			compatible = "arm,cortex-a55";
+			reg = <0x0 0x100>;
+			#cooling-cells = <2>;
+			enable-method = "psci";
+		};
+
+		cpu2: cpu@200 {
+			device_type = "cpu";
+			compatible = "arm,cortex-a55";
+			reg = <0x0 0x200>;
+			#cooling-cells = <2>;
+			enable-method = "psci";
+		};
+
+		cpu3: cpu@300 {
+			device_type = "cpu";
+			compatible = "arm,cortex-a55";
+			reg = <0x0 0x300>;
+			#cooling-cells = <2>;
+			enable-method = "psci";
+		};
+	};
+
+	psci {
+		compatible = "arm,psci-0.2";
+		method = "smc";
+	};
+
+	timer {
+		compatible = "arm,armv8-timer";
+		interrupts = <GIC_PPI 13 IRQ_TYPE_LEVEL_HIGH>,
+			     <GIC_PPI 14 IRQ_TYPE_LEVEL_HIGH>,
+			     <GIC_PPI 11 IRQ_TYPE_LEVEL_HIGH>,
+			     <GIC_PPI 10 IRQ_TYPE_LEVEL_HIGH>;
+	};
+
+	gic: interrupt-controller@fd400000 {
+		compatible = "arm,gic-v3";
+		reg = <0x0 0xfd400000 0 0x10000>, /* GICD */
+		      <0x0 0xfd460000 0 0x80000>; /* GICR */
+		interrupts = <GIC_PPI 9 IRQ_TYPE_LEVEL_HIGH>;
+		interrupt-controller;
+		#interrupt-cells = <3>;
+	};
+
+	pci@f6c00000 {
+		compatible = "pci-host-ecam-generic";
+		device_type = "pci";
+		bus-range = <0 0>;
+		#address-cells = <3>;
+		#size-cells = <2>;
+		#interrupt-cells = <1>;
+		interrupt-map-mask = <0 0 0 7>;
+		interrupt-map = <0 0 0 1 &gic GIC_SPI 256 IRQ_TYPE_EDGE_RISING>,
+				<0 0 0 2 &gic GIC_SPI 257 IRQ_TYPE_EDGE_RISING>,
+				<0 0 0 3 &gic GIC_SPI 258 IRQ_TYPE_EDGE_RISING>,
+				<0 0 0 4 &gic GIC_SPI 259 IRQ_TYPE_EDGE_RISING>;
+		reg = <0x0 0xf6c00000 0x0 0x100000>;
+		ranges =
+			<0x02000000 0x00 0x10000000 0x0 0x10000000 0x00 0x10000>;
+	};
+
+	clk_24mhz: clk24mhz {
+		compatible = "fixed-clock";
+		#clock-cells = <0>;
+		clock-frequency = <24000000>;
+		clock-output-names = "clk_24mhz";
+	};
+
+	osc_24m: clock-osc-24m {
+		compatible = "fixed-clock";
+		#clock-cells = <0>;
+		clock-frequency = <24000000>;
+		clock-output-names = "osc_24m";
+	};
+
+#if 0
+	uart0: serial@fdd50000 {
+		compatible = "snps,dw-apb-uart";
+		reg = <0x0 0xfdd50000 0x0 0x10000>;
+		interrupts = <GIC_SPI 116 IRQ_TYPE_LEVEL_HIGH>;
+		clocks = <&osc_24m>, <&osc_24m>;
+		clock-names = "baudclk", "apb_pclk";
+		reg-io-width = <4>;
+		reg-shift = <2>;
+		status = "okay";
+	};
+
+	uart1: serial@fe650000 {
+		compatible = "snps,dw-apb-uart";
+		reg = <0x0 0xfe650000 0x0 0x10000>;
+		interrupts = <GIC_SPI 117 IRQ_TYPE_LEVEL_HIGH>;
+		clocks = <&osc_24m>, <&osc_24m>;
+		clock-names = "baudclk", "apb_pclk";
+		reg-io-width = <4>;
+		reg-shift = <2>;
+		status = "okay";
+	};
+
+	uart2: serial@fe660000 {
+		compatible = "snps,dw-apb-uart";
+		reg = <0x0 0xfe660000 0x0 0x10000>;
+		interrupts = <GIC_SPI 118 IRQ_TYPE_LEVEL_HIGH>;
+		clocks = <&osc_24m>, <&osc_24m>;
+		clock-names = "baudclk", "apb_pclk";
+		reg-io-width = <4>;
+		reg-shift = <2>;
+		status = "okay";
+	};
+
+	uart3: serial@fe670000 {
+		compatible = "snps,dw-apb-uart";
+		reg = <0x0 0xfe670000 0x0 0x10000>;
+		interrupts = <GIC_SPI 119 IRQ_TYPE_LEVEL_HIGH>;
+		clocks = <&osc_24m>, <&osc_24m>;
+		clock-names = "baudclk", "apb_pclk";
+		reg-io-width = <4>;
+		reg-shift = <2>;
+		status = "okay";
+	};
+
+	uart4: serial@fe680000 {
+		compatible = "snps,dw-apb-uart";
+		reg = <0x0 0xfe680000 0x0 0x10000>;
+		interrupts = <GIC_SPI 120 IRQ_TYPE_LEVEL_HIGH>;
+		clocks = <&osc_24m>, <&osc_24m>;
+		clock-names = "baudclk", "apb_pclk";
+		reg-io-width = <4>;
+		reg-shift = <2>;
+		status = "okay";
+	};
+
+	uart5: serial@fe690000 {
+		compatible = "snps,dw-apb-uart";
+		reg = <0x0 0xfe690000 0x0 0x10000>;
+		interrupts = <GIC_SPI 121 IRQ_TYPE_LEVEL_HIGH>;
+		clocks = <&osc_24m>, <&osc_24m>;
+		clock-names = "baudclk", "apb_pclk";
+		reg-io-width = <4>;
+		reg-shift = <2>;
+		status = "okay";
+	};
+
+	uart6: serial@fe6a0000 {
+		compatible = "snps,dw-apb-uart";
+		reg = <0x0 0xfe6a0000 0x0 0x10000>;
+		interrupts = <GIC_SPI 122 IRQ_TYPE_LEVEL_HIGH>;
+		clocks = <&osc_24m>, <&osc_24m>;
+		clock-names = "baudclk", "apb_pclk";
+		reg-io-width = <4>;
+		reg-shift = <2>;
+		status = "okay";
+	};
+
+	uart7: serial@fe6b0000 {
+		compatible = "snps,dw-apb-uart";
+		reg = <0x0 0xfe6b0000 0x0 0x10000>;
+		interrupts = <GIC_SPI 123 IRQ_TYPE_LEVEL_HIGH>;
+		clocks = <&osc_24m>, <&osc_24m>;
+		clock-names = "baudclk", "apb_pclk";
+		reg-io-width = <4>;
+		reg-shift = <2>;
+		status = "okay";
+	};
+#endif
+
+	uart8: serial@fe6c0000 {
+		compatible = "snps,dw-apb-uart";
+		reg = <0x0 0xfe6c0000 0x0 0x10000>;
+		interrupts = <GIC_SPI 124 IRQ_TYPE_LEVEL_HIGH>;
+		clocks = <&osc_24m>, <&osc_24m>;
+		clock-names = "baudclk", "apb_pclk";
+		reg-io-width = <4>;
+		reg-shift = <2>;
+		status = "okay";
+	};
+
+#if 0
+	uart9: serial@fe6d0000 {
+		compatible = "snps,dw-apb-uart";
+		reg = <0x0 0xfe6d0000 0x0 0x10000>;
+		interrupts = <GIC_SPI 125 IRQ_TYPE_LEVEL_HIGH>;
+		clocks = <&osc_24m>, <&osc_24m>;
+		clock-names = "baudclk", "apb_pclk";
+		reg-io-width = <4>;
+		reg-shift = <2>;
+		status = "okay";
+	};
+#endif
+};
