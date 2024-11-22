@@ -36,12 +36,20 @@
 // #define CONFIG_MACH_NXP_IMX8MQ
 // #define CONFIG_MACH_RK3588
 
-#ifdef CONFIG_MACH_RK3588
-#define NUM_CPU			8
-#else
-#define NUM_CPU			4
-#endif
+
+
+
+
+// #ifdef CONFIG_MACH_RK3588
+// #define NUM_CPU			8
+// #else
+// #define NUM_CPU			4
+// #endif
 #define BOMB_CPU		1 << (BOMB_ID + 1)
+
+
+
+
 /**
  * XXX: Hacky but effective way of configure different parameters
  * for different DRAM layouts on ZCU104, ZCU102 and S32V.
@@ -84,6 +92,13 @@
 #ifdef CONFIG_MACH_RK3588
 #define MAIN_PHYS_BASE		0x20700000
 #define COMM_PHYS_BASE		0x2c800000
+#endif
+#ifdef CONFIG_MACH_AGXORIN
+#define NUM_CPU			12
+#define MAIN_PHYS_BASE		0xc0300000
+#define COMM_PHYS_BASE		0xc5300000
+#else
+#define NUM_CPU			8
 #endif
 
 /* Main program */
