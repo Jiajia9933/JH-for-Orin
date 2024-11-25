@@ -194,7 +194,7 @@ We follow the spirit of the nvbuild.sh script, but tweak it for our purposes.
     # -> Virtualization
     #    -> Kernel-based Virtual Machine (KVM) support
 
-    # disable CONFIG_TEGRA_VIRTUALIZATION:
+    # enable CONFIG_TEGRA_VIRTUALIZATION:
     # -> Device Drivers
     #    -> Tegra Virtualization support
 
