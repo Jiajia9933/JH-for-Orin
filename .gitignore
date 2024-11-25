@@ -1,4 +1,6 @@
 *.tbz2
 *.sha1sum
 *.sh
+*.ko
+modules_out/
 public_sources_sha.txt
