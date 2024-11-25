@@ -2,5 +2,9 @@
 *.sha1sum
 *.sh
 *.ko
+
+jailhouse/build/
+jailhouse/pyjailhouse.egg-info/
+
 modules_out/
 public_sources_sha.txt
