@@ -1,0 +1,297 @@
+# orin_kernel.txt
+#
+# Compiling a kernel for the Nvidia Orin
+#
+# azuepke, 2024-11-18: initial
+# azuepke, 2024-11-20: works with VHE disabled
+
+
+Goal
+-----
+
+Setup a kernel that could work with Jailhouse on the Nvidia Orin.
+
+
+Official Documentation
+-----------------------
+
+Note that the description is specific to r35, based on Ubuntu 20.04.
+For r36, which is based on Ubuntu 22.04, you need a different toolchain.
+
+https://forums.developer.nvidia.com/t/compile-install-customized-kernel-directly-on-orin-developer-kit/261257
+https://docs.nvidia.com/jetson/archives/r35.6.0/DeveloperGuide/SD/Kernel/KernelCustomization.html
+
+You can find all the files of older Tegra versions here:
+https://developer.nvidia.com/embedded/jetson-linux-archive
+
+
+Orin AGX vs Orin Nano Differences
+----------------------------------
+
+* Orin AGX devkit
+  - DTB: tegra234-p3737-0000+p3701-0000.dtb
+    - P3730 complete Jetson AGX Orin Developer Kit
+    - P3701 System on Module (SOM)
+    - P3737 carrier board
+  - rootfs: root=/dev/mmcblk0p1
+  - ttyACM0 @ Micro-USB:  console=ttyTCU0,115200
+  - ttyACM1 @ Micro-USB:  console=ttyAMA0,115200 earlycon=pl011,mmio32,0x031d0000
+
+* Orin Nano
+  - DTB: tegra234-p3767-0003-p3768-0000-a0.dtb
+    - P3766 complete Jetson Orin Nano Developer Kit
+    - P3767 System on Module (SOM)
+    - P3768 carrier board
+  - rootfs:  root=/dev/mmcblk1p1
+  - UART @ below SOM:   console=ttyTCU0,115200
+  - UART @ pin header:  console=ttyTHS0,115200 earlycon=uart8250,mmio32,0x3100000
+
+
+Bootable Kernel Option
+-----------------------
+
+First, create a backup of the current working kernel:
+
+    sudo cp /boot/Image /boot/Image.backup
+    sudo cp /boot/initrd /boot/initrd.backup
+    sudo cp /boot/dtb/kernel_tegra234-p3767-0003-p3768-0000-a0.dtb /boot/dtb/kernel_tegra234-p3767-0003-p3768-0000-a0.dtb.backup
+
+We keep the backup kernel as backup, just in case.
+
+Then, create a test kernel from the current working kernel:
+
+    sudo cp /boot/Image /boot/Image.test
+    sudo cp /boot/initrd /boot/initrd.test
+    sudo cp /boot/dtb/kernel_tegra234-p3767-0003-p3768-0000-a0.dtb /boot/dtb/kernel_tegra234-p3767-0003-p3768-0000-a0.dtb.test
+
+From now on, we will only replace the *test kernel* for our tests!
+
+Then create entries in the boot config:
+
+    sudo vi /boot/extlinux/extlinux.conf
+
+        TIMEOUT 30     # timeout 3.0 seconds, keep this unchanged
+        ...
+
+        LABEL primary
+            ...        # keep this unchanged
+
+        LABEL test
+            MENU LABEL test kernel
+            LINUX /boot/Image.test
+            FDT /boot/dtb/kernel_tegra234-p3767-0003-p3768-0000-a0.dtb.test
+            INITRD /boot/initrd.test
+            #APPEND ${cbootargs}
+            APPEND ${cbootargs} root=/dev/mmcblk1p1 rw rootwait rootfstype=ext4 mminit_loglevel=4 console=ttyTCU0,115200 console=ttyAMA0,115200 console=ttyTCU0,115200 firmware_class.path=/etc/firmware fbcon=map:0 net.ifnames=0 nospectre_bhb
+
+        LABEL backup
+            MENU LABEL backup kernel
+            LINUX /boot/Image.backup
+            FDT /boot/dtb/kernel_tegra234-p3767-0003-p3768-0000-a0.dtb.backup
+            INITRD /boot/initrd.backup
+            #APPEND ${cbootargs}
+            APPEND ${cbootargs} root=/dev/mmcblk1p1 rw rootwait rootfstype=ext4 mminit_loglevel=4 console=ttyTCU0,115200 console=ttyAMA0,115200 console=ttyTCU0,115200 firmware_class.path=/etc/firmware fbcon=map:0 net.ifnames=0 nospectre_bhb
+
+
+Ubuntu preparation
+-------------------
+
+Cross-compiling the kernel requires some python packages on your HOST system:
+
+    sudo apt-get install build-essential bc
+
+
+Toolchain
+----------
+
+From https://developer.nvidia.com/embedded/jetson-linux-r3560,
+download "Bootlin Toolchain gcc 9.3" -> aarch64--glibc--stable-final.tar.gz
+
+NOTE: check the toolchain base directory!
+r36 comes with a directory prefix, but r35 does not!
+
+extract in /opt:
+
+    cd /opt
+    sudo mkdir aarch64--glibc--stable-final
+    cd aarch64--glibc--stable-final
+    sudo tar xf .../aarch64--glibc--stable-final.tar.gz
+
+The toolchain will be installed in /opt/aarch64--glibc--stable-final
+
+NOTE: r35.x and r36.x use different toolchains! r36.x uses the newer GCC 11.3.
+
+
+Sources
+--------
+
+The official documentation in
+https://docs.nvidia.com/jetson/archives/r35.6.0/DeveloperGuide/SD/Kernel/KernelCustomization.html
+mentions do download the sources from git using the source_sync.sh script,
+but this does not integrate well into the build system.
+We stick to the manual process, which is always required anyway.
+
+From https://developer.nvidia.com/embedded/jetson-linux-r3560,
+download "Driver Package (BSP) Sources" -> public_sources.tbz2
+
+Extract it *next* to the rest (i.e. next the "Linux_for_Tegra" directory),
+
+    cd Linux_for_Tegra
+    cd ..
+    tar xf public_sources.tbz2
+
+This adds archives and scripts in "Linux_for_Tegra/source/public/"
+
+Now extract the kernel sources (including the nvgpu and nvethernet drivers):
+
+    cd Linux_for_Tegra/source/public/
+    tar xf kernel_src.tbz2
+
+Apply the patches to the kernel. Change "..." below to your patches:
+
+    cd Linux_for_Tegra/source/public/kernel
+patch -Np1 < /home/jiajia/0001-Jailhouse-disable-cpuidle-driver-on-Orin-when-VHE-is.patch
+patch -Np1 < /home/jiajia/0002-Jailhouse-unconditionally-enable-EL1-access-to-DSU-c.patch
+patch -Np1 < /home/jiajia/0003-Nvidia-I2C-drivers-make-symbols-private.patch
+
+
+Compile Kernel for Jailhouse
+-----------------------------
+
+We follow the spirit of the nvbuild.sh script, but tweak it for our purposes.
+
+    cd Linux_for_Tegra/source/public/
+    mkdir kernel_out
+    export KERNEL_OUT_DIR=`readlink -f kernel_out`
+    mkdir modules_out
+    export MODULES_OUT_DIR=`readlink -f modules_out`
+
+    # create a default kernel config in kernel_out/.config
+    make -C kernel/kernel-5.10 ARCH=arm64 LOCALVERSION="-alex" O=$KERNEL_OUT_DIR \
+        CROSS_COMPILE=/opt/aarch64--glibc--stable-final/bin/aarch64-buildroot-linux-gnu- \
+        tegra_defconfig
+
+    # tweak the kernel config if needed
+    make -C kernel/kernel-5.10 ARCH=arm64 LOCALVERSION="-alex" O=$KERNEL_OUT_DIR \
+        CROSS_COMPILE=/opt/aarch64--glibc--stable-final/bin/aarch64-buildroot-linux-gnu- \
+        menuconfig
+
+    # disable CONFIG_MODVERSIONS:
+    # -> Enable loadable module support
+    #    -> Module versioning support
+
+    # enable OF_OVERLAY
+    # -> Device Drivers
+    #    -> Device Tree and Open Firmware support (OF [=y])
+    #       -> Device Tree overlays
+
+    # disable CONFIG_ARM64_VHE:
+    # -> Kernel Features
+    #    -> ARMv8.1 architectural features
+    #       -> Enable support for Virtualization Host Extensions (VHE)
+
+    # disable CONFIG_KVM:
+    # -> Virtualization
+    #    -> Kernel-based Virtual Machine (KVM) support
+
+    # disable CONFIG_TEGRA_VIRTUALIZATION:
+    # -> Device Drivers
+    #    -> Tegra Virtualization support
+
+    # disable CONFIG_ARM_PSCI_CPUIDLE
+    # -> CPU Power Management
+    #    -> CPU Idle
+    #       -> CPU idle PM support (CPU_IDLE [=y])
+    #          -> ARM CPU Idle Drivers
+    #             -> PSCI CPU idle Driver
+
+    # disable CONFIG_CPU_IDLE_TEGRA19X
+    # -> CPU Power Management
+    #    -> CPU Idle
+    #       -> CPU idle PM support (CPU_IDLE [=y])
+    #          -> ARM CPU Idle Drivers
+    #             -> CPU Idle Driver for NVIDIA Tegra19x SoCs
+
+    # disable CONFIG_CPU_IDLE_TEGRA_AUTO
+    # -> CPU Power Management
+    #    -> CPU Idle
+    #       -> CPU idle PM support (CPU_IDLE [=y])
+    #          -> ARM CPU Idle Drivers
+    #             -> CPU Idle Driver for NVIDIA Tegra auto platforms
+
+    # build kernel, DTBs and modules
+    # NOTE: to compile only the kernel, use just "Image"
+    make -C kernel/kernel-5.10 ARCH=arm64 LOCALVERSION="-alex" O=$KERNEL_OUT_DIR \
+        CROSS_COMPILE=/opt/aarch64--glibc--stable-final/bin/aarch64-buildroot-linux-gnu- \
+        -j16 --output-sync=target Image dtbs modules
+
+    # install modules in $MODULES_OUT_DIR
+    make -C kernel/kernel-5.10 ARCH=arm64 LOCALVERSION="-alex" O=$KERNEL_OUT_DIR \
+        CROSS_COMPILE=/opt/aarch64--glibc--stable-final/bin/aarch64-buildroot-linux-gnu- \
+        -j16 INSTALL_MOD_PATH=$MODULES_OUT_DIR modules_install
+    # we remove the two symlinks to source and build directories afterwards
+    rm modules_out/lib/modules/*/{build,source}
+
+
+Deploy kernels and modules on the target
+-----------------------------------------
+
+On the host, copy the kernel and the modules to the target:
+
+    # copy kernel image to target
+    scp kernel_out/arch/arm64/boot/Image nvidia@orinnano:
+
+    # copy kernel modules to target
+    scp -r modules_out/lib/modules/ nvidia@orinnano:
+
+On the target, deploy the kernel image and the modules:
+
+    # overwrite kernel image
+    sudo mv ~/Image /boot/Image.test
+
+    # replace old modules with new ones
+    sudo rm -rf /lib/modules/5.10.216-alex/
+    sudo mv ~/modules/5.10.216-alex/ /lib/modules/
+
+Reboot target
+
+    sudo reboot
+
+When the target shows the following text, press 1 to boot the new test kernel:
+
+    L4TLauncher: Attempting Direct Boot
+    L4T boot options
+    0: primary kernel
+    1: test kernel
+    2: backup kernel
+    Press 0-2 to boot selection within 3.0 seconds.
+    Press any other key to boot default (Option: 0)
+
+If the new kernel fail to boot, the board will automatically reboot
+after 60 seconds. Except if the kernel is still running, but stuck.
+Then you have to reboot manually.
+
+
+Tweaks needed when disabling VHE
+---------------------------------
+
+- CONFIG_ARM64_VHE and CONFIG_KVM
+  both must be disabled for jailhouse
+
+- disable "nvidia,tegra23x-cpuidle-debugfs" in the DTB
+  or disable the nvidia/drivers/cpuidle/cpuidle-debugfs-tegra23x.c driver
+  > crashes with:
+  > Internal error: Oops - Undefined instruction: 0000000002000000 [#1] PREEMPT SMP
+
+- enable ACTLR bits in head.S
+  > needed, otherwise kernel gets stuck in DSU PMU driver
+
+- disable CONFIG_ARM_PSCI_CPUIDLE
+  this causes random timeout issues in the kernel
+
+- CONFIG_CPU_IDLE_TEGRA19X and CONFIG_CPU_IDLE_TEGRA_AUTO
+  these do not compile when CONFIG_ARM_PSCI_CPUIDLE is disabled
+
+*** TODO ***
+
+- CONFIG_TEGRA_VIRTUALIZATION -> the kernel boots, but we don't know if this collides with Jailhouse
