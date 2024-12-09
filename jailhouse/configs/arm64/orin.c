@@ -6,7 +6,7 @@ struct {
 	struct jailhouse_system header;
 	__u64 cpus[1];
 	struct jailhouse_memory mem_regions[4 + 4 + 1 + 5];
-	struct jailhouse_irqchip irqchips[8];
+	struct jailhouse_irqchip irqchips[10];
 	struct jailhouse_pci_device pci_devices[2];
 } __attribute__((packed)) config = {
 	.header = {
@@ -62,7 +62,7 @@ struct {
 	},
 
 	.mem_regions = {
-		/* 6 MB memory region from 0xc0200000 to 0xc80000000 for communication */
+		/* 6 MB memory region from 0xc0200000 to 0xc08000000 for communication */
 
 		/* IVSHMEM shared memory regions for 00:00.0 (demo) */
 		/* 4 regions for 2 peers */
@@ -92,22 +92,14 @@ struct {
 		},
 
 		/* IVSHMEM shared memory regions for 00:01.0 (networking) */
-		JAILHOUSE_SHMEM_NET_REGIONS(0xc0240000, 0), /* four regions, size 1MB */
+		JAILHOUSE_SHMEM_NET_REGIONS(0xc0300000, 0), /* four regions, size 1MB */
 
-		/* 80 MB memory region from 0xc0300000 to 0xc5300000 for cells */ {
-			.phys_start = 0xc0300000,
-			.virt_start = 0xc0300000,
-			.size = 0x05000000,
+		/* 120 MB memory region from 0xc0800000 to 0xc8000000 for cells */{
+			.phys_start = 0xc0800000,
+			.virt_start = 0xc0800000,
+			.size = 0x07800000,
 			.flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE,
 		},
-
-
-
-
-
-
-
-
 
 
 
@@ -173,49 +165,49 @@ struct {
 			},
 		},
 		/* GIC */ {
-			.address = 0xfd400000,
+			.address = 0x0f400000,
 			.pin_base = 160,
 			.pin_bitmap = {
 				0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
 			},
 		},
 		/* GIC */ {
-			.address = 0xfd400000,
+			.address = 0x0f400000,
 			.pin_base = 288,
 			.pin_bitmap = {
 				0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
 			},
 		},
 		/* GIC */ {
-			.address = 0xfd400000,
+			.address = 0x0f400000,
 			.pin_base = 416,
 			.pin_bitmap = {
 				0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
 			},
 		},
 		/* GIC */ {
-			.address = 0xfd400000,
+			.address = 0x0f400000,
 			.pin_base = 544,
 			.pin_bitmap = {
 				0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
 			},
 		},
 		/* GIC */ {
-			.address = 0xfd400000,
+			.address = 0x0f400000,
 			.pin_base = 672,
 			.pin_bitmap = {
 				0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
 			},
 		},
 		/* GIC */ {
-			.address = 0xfd400000,
+			.address = 0x0f400000,
 			.pin_base = 800,
 			.pin_bitmap = {
 				0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
 			},
 		},
 		/* GIC */ {
-			.address = 0xfd400000,
+			.address = 0x0f400000,
 			.pin_base = 928,
 			.pin_bitmap = {
 				0xffffffff, 0xffffffff, 0, 0,
