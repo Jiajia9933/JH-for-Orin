@@ -1200,7 +1200,7 @@ static void tegra_uart_hw_deinit(struct tegra_uart_port *tup)
 	if (!tup->use_tx_pio)
 		tegra_uart_dma_channel_free(tup, false);
 
-	clk_disable_unprepare(tup->uart_clk);
+	//clk_disable_unprepare(tup->uart_clk);
 }
 
 static int tegra_uart_hw_init(struct tegra_uart_port *tup)
@@ -1860,6 +1860,7 @@ static const struct of_device_id tegra_uart_of_match[] = {
 	},
 };
 MODULE_DEVICE_TABLE(of, tegra_uart_of_match);
+
 
 static int tegra_uart_probe(struct platform_device *pdev)
 {
