@@ -111,6 +111,10 @@
 		};
 	};
 
+	serial@3100000 {
+		status = "okay";
+	};
+
 	tegra_soc_hwpm {
                 status = "okay";
         };
