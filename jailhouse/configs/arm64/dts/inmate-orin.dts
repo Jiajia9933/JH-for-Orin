@@ -201,18 +201,14 @@
 	};
 
 	uart0: serial@3100000 {
-		// compatible = "ns16550a";
-		compatible = "ns16550a";
+		compatible = "ns16450";
 		reg = <0x0 0x03100000 0x0 0x10000>;
 		interrupts = <GIC_SPI 112 IRQ_TYPE_LEVEL_HIGH>;
 		clocks = <&osc_408m>, <&osc_408m>;
-		// clocks = <&osc_408m 4 1>;
 		clock-names = "baudclk", "apb_pclk";
 		reg-io-width = <4>;
 		reg-shift = <2>;
 		status = "okay";
-		
 	};
-
-
+	
 };
