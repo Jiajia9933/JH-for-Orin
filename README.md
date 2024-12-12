@@ -23,6 +23,13 @@ Linux_for_Tegra/source/public/hardware/nvidia/platform/t23x/concord/kernel-dts/t
 		};
 	};
 
+
+    // set uart0 status = "okay"
+
+    serial@3100000 {
+		status = "okay";
+	};
+
 ### 3. Download and set the toolchain as discribed in [orin_kernel.txt](orin_kernel.txt)
 
     -> for compiling the kernel just do following commands:
@@ -48,7 +55,7 @@ Linux_for_Tegra/source/public/hardware/nvidia/platform/t23x/concord/kernel-dts/t
     make -C kernel/kernel-5.10/ LOCALVERSION="-YOUR_VERSION" O=$PWD/kernel_out/ -j12 INSTALL_MOD_PATH=$MODULES_OUT_DIR modules_install
 
 
-### These you should bring to the Orin board:
+### These you should bring to the Orin board for the kernel:
 Image:      
 Linux_for_Tegra/source/public/kernel_out/arch/arm64/boot/Image
 
@@ -70,13 +77,54 @@ Linux_for_Tegra/source/public/modules_out/lib/modules/5.10.216-YOUR_VERSION/
 
     rm -rf ../modules_out/usr/local/lib/python3.11/dist-packages/pyjailhouse/__pycache__/
 
-### These you should bring to the Orin board:
+### compile another kernel Image for jailhouse guest cell
+
+    // Download source code:
+    
+    wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.104.tar.xz
+    tar xf linux-6.1.104.tar.xz
+    mv linux-6.1.104 linux-guest
+
+    // Add jailhouse enabling patches:
+
+    cd linux-guest
+    git init
+    git add .??* *
+    git commit -m "import"
+    git am jailhouse-documentation/jailhouse-enabling-patches/6.1.y/*.patch
+
+-> copy [.config_guest](.config_guest) to linux-guest/ and compile the kernel
+
+    cd linux-guest
+    export ARCH=arm64
+    export CROSS_COMPILE=aarch64-linux-gnu-
+    make oldconfig
+    make -j$(nproc)
+    cp arch/arm64/boot/Image Image_guest  // -> this Image_guest is used for jailhouse guest cell 
+
+    
 
 
-Linux_for_Tegra/source/public/modules_out/usr/
-Linux_for_Tegra/source/public/jailhouse/configs/arm64/orin.cell 
-Linux_for_Tegra/source/public/jailhouse/driver/jailhouse.ko 
+
+
+### These you should bring to the Orin board for jailhouse:
+
+For root cell:
+
+Linux_for_Tegra/source/public/modules_out/usr/\
+Linux_for_Tegra/source/public/jailhouse/configs/arm64/orin.cell\
+Linux_for_Tegra/source/public/jailhouse/driver/jailhouse.ko\
 Linux_for_Tegra/source/public/jailhouse/hypervisor/jailhouse.bin
+
+For guest cell:
+
+Linux_for_Tegra/source/public/jailhouse/configs/arm64/dts/inmate-orin.dtb\
+Linux_for_Tegra/source/public/jailhouse/configs/arm64/dts/inmate-orin2.dtb\
+Linux_for_Tegra/source/public/jailhouse/configs/arm64/orin-linux-demo.cell\
+Linux_for_Tegra/source/public/jailhouse/configs/arm64/orin-linux-demo2.cell\
+linux_guest/arch/arm64/boot/Image_guest\
+[initrd](initrd) 
+
 
 
 # Start the jailhouse root cell on the Orin board:
@@ -89,3 +137,18 @@ Linux_for_Tegra/source/public/jailhouse/hypervisor/jailhouse.bin
     sudo depmode -a
     sudo modprobe jailhouse
     sudo jailhouse enable /lib/firmware/orin.cell
+
+# Start the FIRST guest cell:
+
+    sudo cp orin-linux-demo.cell /lib/firmware/
+    sudo cp inmate-orin.dtb /lib/firmware/
+    sudo stty -F /dev/ttyTHS0 115200
+    sudo jailhouse cell linux /lib/firmware/orin-linux-demo.cell /home/nvidia/Image_guest -d /lib/firmware/inmate-orin.dtb -i /home/nvidia/initrd -c "console=ttyS1,115200 cma=4M"
+    (check guest cell here: picocom -b 115200 /dev/ttyUSB.orin.4) 
+
+# Start the SECOND guest cell:
+
+    sudo cp orin-linux-demo2.cell /lib/firmware/
+    sudo cp inmate-orin2.dtb /lib/firmware/
+    sudo jailhouse cell linux /lib/firmware/orin-linux-demo2.cell /home/nvidia/Image_guest -d /lib/firmware/inmate-orin2.dtb -i /home/nvidia/initrd -c "console=ttyAMA1,115200 cma=4M"
+
