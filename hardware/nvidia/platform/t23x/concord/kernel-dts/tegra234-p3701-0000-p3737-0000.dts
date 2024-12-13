@@ -94,14 +94,25 @@
 		};
 	};
 
+	// reserved-memory {
+	// 	#address-cells = <2>;
+	// 	#size-cells = <2>;
+	// 	ranges;
+
+	// 	jailhouse@c0000000  {
+	// 		no-map;
+	// 		reg = <0x0 0xc0000000 0x0 0x08000000>;
+	// 	};
+	// };
+
 	reserved-memory {
 		#address-cells = <2>;
 		#size-cells = <2>;
 		ranges;
 
-		jailhouse@c0000000  {
+		jailhouse@110000000  {
 			no-map;
-			reg = <0x0 0xc0000000 0x0 0x08000000>;
+			reg = <0x1 0x10000000 0x0 0x40000000>;
 		};
 	};
 
