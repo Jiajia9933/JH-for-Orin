@@ -5,9 +5,9 @@
 struct {
 	struct jailhouse_system header;
 	__u64 cpus[1];
-	struct jailhouse_memory mem_regions[4 + 4 + 1 + 5];
+	struct jailhouse_memory mem_regions[1 + 5];
 	struct jailhouse_irqchip irqchips[10];
-	struct jailhouse_pci_device pci_devices[2];
+	// struct jailhouse_pci_device pci_devices[3];
 } __attribute__((packed)) config = {
 	.header = {
 		.signature = JAILHOUSE_SYSTEM_SIGNATURE,
@@ -18,7 +18,7 @@ struct {
 			// .phys_start = 0xc0000000, 
 			// .size = 0x00200000, 
 			.phys_start = 0x110000000, 
-			.size = 0x00200000, 
+			.size = 0x02000000, 
 		},
 		.debug_console = {
 			/* uarti */
@@ -33,6 +33,12 @@ struct {
 			.pci_mmconfig_end_bus = 0,
 			.pci_is_virtual = 1,
 			.pci_domain = 6,
+			.color = {
+				/* autodetected if not specified */
+				//.way_size = 0x40000,
+				.root_map_offset = 0x0C000000000,
+			},
+
 			.arm = {
 				.maintenance_irq = 25,	
 				.gic_version = 3,
@@ -51,7 +57,7 @@ struct {
 		},
 		.root_cell = {
 			.name = "Jetson-AGX-Orin-Root", 
-			.num_pci_devices = ARRAY_SIZE(config.pci_devices),
+			// .num_pci_devices = ARRAY_SIZE(config.pci_devices),
 			.cpu_set_size = sizeof(config.cpus),
 			.num_memory_regions = ARRAY_SIZE(config.mem_regions),
 			.num_irqchips = ARRAY_SIZE(config.irqchips),
@@ -64,53 +70,58 @@ struct {
 	},
 
 	.mem_regions = {
-		/* 6 MB memory region from 0xc0200000 to 0xc08000000 for communication */
+		// /* 6 MB memory region from 0xc0200000 to 0xc08000000 for communication */
 
-		/* IVSHMEM shared memory regions for 00:00.0 (demo) */
-		/* 4 regions for 2 peers */
-		/* state table, read-only for all */ {
-			// .phys_start = 0xc0200000,
-			// .virt_start = 0xc0200000,
-			.phys_start = 0x110200000,
-			.virt_start = 0x110200000,
-			.size = 0x10000,
-			.flags = JAILHOUSE_MEM_READ,
-		},
-		/* shared region, read-write for all */ {
-			// .phys_start = 0xc0210000,
-			// .virt_start = 0xc0210000,
-			.phys_start = 0x110210000,
-			.virt_start = 0x110210000,
-			.size = 0x10000,
-			.flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE,
-		},
-		/* peer 0 output region */ {
-			// .phys_start = 0xc0220000,
-			// .virt_start = 0xc0220000,
-			.phys_start = 0x110220000,
-			.virt_start = 0x110220000,
-			.size = 0x10000,
-			.flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE,
-		},
-		/* peer 1 output region */ {
-			// .phys_start = 0xc0230000,
-			// .virt_start = 0xc0230000,
-			.phys_start = 0x110230000,
-			.virt_start = 0x110230000,
-			.size = 0x10000,
-			.flags = JAILHOUSE_MEM_READ,
-		},
+		// /* IVSHMEM shared memory regions for 00:00.0 (demo) */
+		// /* 4 regions for 2 peers */
+		// /* state table, read-only for all */ {
+		// 	// .phys_start = 0xc0200000,
+		// 	// .virt_start = 0xc0200000,
+		// 	.phys_start = 0x110200000,
+		// 	.virt_start = 0x110200000,
+		// 	.size = 0x10000,
+		// 	.flags = JAILHOUSE_MEM_READ,
+		// },
+		// /* shared region, read-write for all */ {
+		// 	// .phys_start = 0xc0210000,
+		// 	// .virt_start = 0xc0210000,
+		// 	.phys_start = 0x110210000,
+		// 	.virt_start = 0x110210000,
+		// 	.size = 0x10000,
+		// 	.flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE,
+		// },
+		// /* peer 0 output region */ {
+		// 	// .phys_start = 0xc0220000,
+		// 	// .virt_start = 0xc0220000,
+		// 	.phys_start = 0x110220000,
+		// 	.virt_start = 0x110220000,
+		// 	.size = 0x10000,
+		// 	.flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE,
+		// },
+		// /* peer 1 output region */ {
+		// 	// .phys_start = 0xc0230000,
+		// 	// .virt_start = 0xc0230000,
+		// 	.phys_start = 0x110230000,
+		// 	.virt_start = 0x110230000,
+		// 	.size = 0x10000,
+		// 	.flags = JAILHOUSE_MEM_READ,
+		// },
 
-		/* IVSHMEM shared memory regions for 00:01.0 (networking) */
-		// JAILHOUSE_SHMEM_NET_REGIONS(0xc0300000, 0), /* four regions, size 1MB */
-		JAILHOUSE_SHMEM_NET_REGIONS(0x110300000, 0), /* four regions, size 1MB */
-		/* 120 MB memory region from 0x100800000 to 0x140000000 for cells */{
+		// /* IVSHMEM shared memory regions for 00:01.0 (networking) */
+		// // JAILHOUSE_SHMEM_NET_REGIONS(0xc0300000, 0), /* four regions, size 1MB */
+		// JAILHOUSE_SHMEM_NET_REGIONS(0x111300000, 0), /* four regions, size 1MB */
+		
+		
+		
+		
+		
+		/* 1508 MB memory region from 0x112c00000 to 0x170000000 for cells */{
 			// .phys_start = 0xc0800000,
 			// .virt_start = 0xc0800000,
 			// .size = 0x07800000,
-			.phys_start = 0x110800000,
-			.virt_start = 0x110800000,
-			.size = 0x3f800000,
+			.phys_start = 0x112c00000,
+			.virt_start = 0x112c00000,
+			.size = 0x5d400000,
 			.flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE,
 		},
 
@@ -157,9 +168,9 @@ struct {
 			// .phys_start = 0xc8000000,
 			// .virt_start = 0xc8000000,
 			// .size = 0x778000000, /* ！！！ from c800'0000 to 8'4000'0000 ！！！ */
-			.phys_start = 0x150000000,
-			.virt_start = 0x150000000,
-			.size = 0x6f0000000, /* ！！！ from 15000'0000 to 8'4000'0000 ！！！ */
+			.phys_start = 0x170000000,
+			.virt_start = 0x170000000,
+			.size = 0x6d0000000, /* ！！！ from 15000'0000 to 8'4000'0000 ！！！ */
 			.flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
 			         JAILHOUSE_MEM_EXECUTE | JAILHOUSE_MEM_DMA,
 		},
@@ -234,26 +245,36 @@ struct {
 		},
 	},
 
-	.pci_devices = {
-		/* 00:00.0 (demo) */ {
-			.type = JAILHOUSE_PCI_TYPE_IVSHMEM,
-			.domain = 6,
-			.bdf = 0 << 3,
-			.bar_mask = JAILHOUSE_IVSHMEM_BAR_MASK_INTX,
-			.shmem_regions_start = 0,
-			.shmem_dev_id = 0,
-			.shmem_peers = 2,
-			.shmem_protocol = JAILHOUSE_SHMEM_PROTO_UNDEFINED,
-		},
-		/* 00:01.0 (networking) */ {
-			.type = JAILHOUSE_PCI_TYPE_IVSHMEM,
-			.domain = 6,
-			.bdf = 1 << 3,
-			.bar_mask = JAILHOUSE_IVSHMEM_BAR_MASK_INTX,
-			.shmem_regions_start = 4,
-			.shmem_dev_id = 0,
-			.shmem_peers = 2,
-			.shmem_protocol = JAILHOUSE_SHMEM_PROTO_VETH,
-		},
-	},
+	// .pci_devices = {
+	// 	/* 00:00.0 (demo) */ {
+	// 		.type = JAILHOUSE_PCI_TYPE_IVSHMEM,
+	// 		.domain = 6,
+	// 		.bdf = 0 << 3,
+	// 		.bar_mask = JAILHOUSE_IVSHMEM_BAR_MASK_INTX,
+	// 		.shmem_regions_start = 0,
+	// 		.shmem_dev_id = 0,
+	// 		.shmem_peers = 2,
+	// 		.shmem_protocol = JAILHOUSE_SHMEM_PROTO_UNDEFINED,
+	// 	},
+	// 	/* 00:00.0 (demo) */ {
+	// 		.type = JAILHOUSE_PCI_TYPE_IVSHMEM,
+	// 		.domain = 6,
+	// 		.bdf = 3 << 3,
+	// 		.bar_mask = JAILHOUSE_IVSHMEM_BAR_MASK_INTX,
+	// 		.shmem_regions_start = 2,
+	// 		.shmem_dev_id = 0,
+	// 		.shmem_peers = 2,
+	// 		.shmem_protocol = JAILHOUSE_SHMEM_PROTO_UNDEFINED,
+	// 	},
+	// 	/* 00:01.0 (networking) */ {
+	// 		.type = JAILHOUSE_PCI_TYPE_IVSHMEM,
+	// 		.domain = 6,
+	// 		.bdf = 1 << 3,
+	// 		.bar_mask = JAILHOUSE_IVSHMEM_BAR_MASK_INTX,
+	// 		.shmem_regions_start = 4,
+	// 		.shmem_dev_id = 0,
+	// 		.shmem_peers = 2,
+	// 		.shmem_protocol = JAILHOUSE_SHMEM_PROTO_VETH,
+	// 	},
+	// },
 };

@@ -29,7 +29,7 @@
 #include <dt-bindings/interrupt-controller/arm-gic.h>
 
 / {
-	model = "Jailhouse cell on Orin";
+	model = "Jailhouse cell1 on Orin";
 	interrupt-parent = <&gic>;
 	#address-cells = <2>;
 	#size-cells = <2>;
