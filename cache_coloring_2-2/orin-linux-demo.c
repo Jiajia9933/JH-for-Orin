@@ -111,8 +111,10 @@ struct {
 			.virt_start = 0,
 			.size = 0x00100000,
 			.flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
-			         JAILHOUSE_MEM_EXECUTE | JAILHOUSE_MEM_LOADABLE | JAILHOUSE_MEM_COLORED,
-			.colors = 0x00000000ffffffff,
+			         JAILHOUSE_MEM_EXECUTE | JAILHOUSE_MEM_LOADABLE,
+			.colors = 0x0000ffff,	 
+			// .colors = 0xffffff00,
+			// .colors = 0x000000ff, 
 
 		},
 
@@ -129,8 +131,11 @@ struct {
 			//          JAILHOUSE_MEM_LOADABLE,
 			.flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
 			         JAILHOUSE_MEM_EXECUTE | JAILHOUSE_MEM_DMA |
-			         JAILHOUSE_MEM_LOADABLE | JAILHOUSE_MEM_COLORED,
-			.colors = 0x00000000ffffffff,
+			         JAILHOUSE_MEM_LOADABLE,
+			.colors = 0x0000ffff,
+			// .colors = 0xffffff00,
+			// .colors = 0x000000ff,
+			
 		},
 
 		/* uart0 */ {
