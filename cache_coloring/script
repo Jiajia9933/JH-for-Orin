@@ -1,0 +1,21 @@
+
+
+#!/bin/bash
+
+sudo true
+
+echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+
+
+sudo modprobe jailhouse
+
+sudo jailhouse enable /lib/firmware/orin.cell
+
+
+sudo jailhouse cell linux /lib/firmware/orin-linux-demo2.cell /home/nvidia/Image_guest -d /lib/firmware/inmate-orin2.dtb -i /home/nvidia/initrd_guest/initrd_2 -c "earlycon=pl011,0x031d0000 console=ttyAMA1,115200 cma=4M"
+
+
+sudo stty -F /dev/ttyTHS0 115200 && echo "Hello :)" | sudo tee /dev/ttyTHS0
+
+
+sudo jailhouse cell linux /lib/firmware/orin-linux-demo.cell /home/nvidia/Image_guest -d /lib/firmware/inmate-orin.dtb -i /home/nvidia/initrd_guest/initramfs.cpio -c "console=ttyS1,115200 cma=4M"
