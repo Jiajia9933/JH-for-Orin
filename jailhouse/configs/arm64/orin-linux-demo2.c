@@ -57,7 +57,7 @@ struct {
 	},
 
 	.cpus = {
-		0b000000000001,	/* use cpu 4,5 */
+		0b000000000010,	/* use cpu 1 */
 	},
 
 	.mem_regions = {
@@ -98,27 +98,34 @@ struct {
 		/* 492 MB memory region from 0x151400000 to 0x170000000 for cell 2 */
 
 		/* RAM for loader */ {
-			.phys_start = 0x16ff00000,
+			.phys_start = 0x15ff00000,
 			.virt_start = 0,
 			.size = 0x00100000,
 			.flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
-			         JAILHOUSE_MEM_EXECUTE | JAILHOUSE_MEM_LOADABLE | JAILHOUSE_MEM_COLORED,
-			.colors = 0xffffffff00000000,
+			         JAILHOUSE_MEM_EXECUTE | JAILHOUSE_MEM_LOADABLE,
+
 		},
 
 		/* RAM for kernel */ {
 			// .phys_start = 0xc0800000,
 			// .virt_start = 0xc0800000,
 			// .size = 0x077f0000,
-			/* from 151400000 to (170000000 - 100000), about 491 MB for cell 2 */
+			/* from 151400000 to (160000000 - 100000), about 491 MB for cell 2 */
 
 			.phys_start = 0x151400000,
 			.virt_start = 0x151400000,
-			.size = 0x1eb00000,
+			.size = 0x0eb00000,
+			// .flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
+			//          JAILHOUSE_MEM_EXECUTE | JAILHOUSE_MEM_DMA |
+			//          JAILHOUSE_MEM_LOADABLE,
+
 			.flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
 			         JAILHOUSE_MEM_EXECUTE | JAILHOUSE_MEM_DMA |
 			         JAILHOUSE_MEM_LOADABLE | JAILHOUSE_MEM_COLORED,
-			.colors = 0xffffffff00000000,
+			// .colors = 0xffff0000,
+			// .colors = 0x000000ff,
+			.colors = 0xffffff00,
+
 		},
 
 		/* uarti */ {
