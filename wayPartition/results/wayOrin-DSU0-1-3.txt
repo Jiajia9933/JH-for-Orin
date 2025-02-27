@@ -1,0 +1,2800 @@
+--------------------------cif--------------------------------
+-----------------------------------------------------------------
+disparity - - none -s 8
+0.039901
+mser - - none -s 8
+0.017567
+tracking - - none -s 8
+0.025691
+disparity -c 2 read -s 8
+0.039974
+mser -c 2 read -s 8
+0.017503
+tracking -c 2 read -s 8
+0.025664
+disparity -c 2 read -s 16
+0.039754
+mser -c 2 read -s 16
+0.017665
+tracking -c 2 read -s 16
+0.025628
+disparity -c 2 read -s 24
+0.039926
+mser -c 2 read -s 24
+0.017704
+tracking -c 2 read -s 24
+0.025658
+disparity -c 2 read -s 32
+0.039984
+mser -c 2 read -s 32
+0.017724
+tracking -c 2 read -s 32
+0.025688
+disparity -c 2 read -s 40
+0.040050
+mser -c 2 read -s 40
+0.017911
+tracking -c 2 read -s 40
+0.025669
+disparity -c 2 read -s 48
+0.039931
+mser -c 2 read -s 48
+0.017806
+tracking -c 2 read -s 48
+0.025718
+disparity -c 2 read -s 56
+0.039897
+mser -c 2 read -s 56
+0.017189
+tracking -c 2 read -s 56
+0.025663
+disparity -c 2 read -s 64
+0.040322
+mser -c 2 read -s 64
+0.017737
+tracking -c 2 read -s 64
+0.025649
+disparity -c 2 read -s 96
+0.039935
+mser -c 2 read -s 96
+0.017630
+tracking -c 2 read -s 96
+0.025689
+disparity -c 2 read -s 128
+0.039861
+mser -c 2 read -s 128
+0.017821
+tracking -c 2 read -s 128
+0.025643
+disparity -c 2 read -s 160
+0.039965
+mser -c 2 read -s 160
+0.017628
+tracking -c 2 read -s 160
+0.025691
+disparity -c 2 read -s 192
+0.040071
+mser -c 2 read -s 192
+0.017090
+tracking -c 2 read -s 192
+0.025679
+disparity -c 2 read -s 224
+0.041995
+mser -c 2 read -s 224
+0.017380
+tracking -c 2 read -s 224
+0.025720
+disparity -c 2 read -s 256
+0.042173
+mser -c 2 read -s 256
+0.017687
+tracking -c 2 read -s 256
+0.025743
+disparity -c 2 read -s 288
+0.041029
+mser -c 2 read -s 288
+0.017917
+tracking -c 2 read -s 288
+0.025747
+disparity -c 2 read -s 320
+0.040784
+mser -c 2 read -s 320
+0.017806
+tracking -c 2 read -s 320
+0.025709
+disparity -c 2 read -s 352
+0.041721
+mser -c 2 read -s 352
+0.018051
+tracking -c 2 read -s 352
+0.025711
+disparity -c 2 read -s 384
+0.042624
+mser -c 2 read -s 384
+0.018061
+tracking -c 2 read -s 384
+0.025724
+disparity -c 2 read -s 416
+0.041123
+mser -c 2 read -s 416
+0.017971
+tracking -c 2 read -s 416
+0.025718
+disparity -c 2 read -s 448
+0.042609
+mser -c 2 read -s 448
+0.017838
+tracking -c 2 read -s 448
+0.025743
+disparity -c 2 read -s 480
+0.042534
+mser -c 2 read -s 480
+0.017710
+tracking -c 2 read -s 480
+0.025734
+disparity -c 2 read -s 512
+0.041216
+mser -c 2 read -s 512
+0.017786
+tracking -c 2 read -s 512
+0.025745
+disparity -c 2 read -s 640
+0.040840
+mser -c 2 read -s 640
+0.017777
+tracking -c 2 read -s 640
+0.025693
+disparity -c 2 read -s 768
+0.040973
+mser -c 2 read -s 768
+0.018194
+tracking -c 2 read -s 768
+0.025706
+disparity -c 2 read -s 896
+0.042527
+mser -c 2 read -s 896
+0.017942
+tracking -c 2 read -s 896
+0.025732
+disparity -c 2 read -s 1024
+0.042715
+mser -c 2 read -s 1024
+0.017808
+tracking -c 2 read -s 1024
+0.025694
+disparity -c 2 read -s 1152
+0.041082
+mser -c 2 read -s 1152
+0.018044
+tracking -c 2 read -s 1152
+0.025790
+disparity -c 2 read -s 1280
+0.042765
+mser -c 2 read -s 1280
+0.018079
+tracking -c 2 read -s 1280
+0.025778
+disparity -c 2 read -s 1408
+0.042890
+mser -c 2 read -s 1408
+0.018248
+tracking -c 2 read -s 1408
+0.025764
+disparity -c 2 read -s 1536
+0.042881
+mser -c 2 read -s 1536
+0.018588
+tracking -c 2 read -s 1536
+0.025804
+disparity -c 2 read -s 1664
+0.041382
+mser -c 2 read -s 1664
+0.018612
+tracking -c 2 read -s 1664
+0.025836
+disparity -c 2 read -s 1792
+0.043491
+mser -c 2 read -s 1792
+0.018722
+tracking -c 2 read -s 1792
+0.025777
+disparity -c 2 read -s 1920
+0.042046
+mser -c 2 read -s 1920
+0.019017
+tracking -c 2 read -s 1920
+0.025907
+disparity -c 2 read -s 2048
+0.042725
+mser -c 2 read -s 2048
+0.019259
+tracking -c 2 read -s 2048
+0.025841
+disparity -c 2 read -s 2176
+0.043273
+mser -c 2 read -s 2176
+0.019603
+tracking -c 2 read -s 2176
+0.025954
+disparity -c 2 read -s 2304
+0.044951
+mser -c 2 read -s 2304
+0.019826
+tracking -c 2 read -s 2304
+0.025967
+disparity -c 2 read -s 2432
+0.044545
+mser -c 2 read -s 2432
+0.020063
+tracking -c 2 read -s 2432
+0.026056
+disparity -c 2 read -s 2560
+0.044290
+mser -c 2 read -s 2560
+0.020533
+tracking -c 2 read -s 2560
+0.026141
+disparity -c 2 read -s 2688
+0.044810
+mser -c 2 read -s 2688
+0.020832
+tracking -c 2 read -s 2688
+0.026124
+disparity -c 2 read -s 2816
+0.046819
+mser -c 2 read -s 2816
+0.021329
+tracking -c 2 read -s 2816
+0.026216
+disparity -c 2 read -s 2944
+0.047236
+mser -c 2 read -s 2944
+0.021875
+tracking -c 2 read -s 2944
+0.026201
+disparity -c 2 read -s 3072
+0.046311
+mser -c 2 read -s 3072
+0.022056
+tracking -c 2 read -s 3072
+0.026263
+disparity -c 2 read -s 3200
+0.048022
+mser -c 2 read -s 3200
+0.022471
+tracking -c 2 read -s 3200
+0.026323
+disparity -c 2 read -s 3328
+0.048337
+mser -c 2 read -s 3328
+0.023085
+tracking -c 2 read -s 3328
+0.026360
+disparity -c 2 read -s 3456
+0.047281
+mser -c 2 read -s 3456
+0.023687
+tracking -c 2 read -s 3456
+0.026502
+disparity -c 2 read -s 3584
+0.047628
+mser -c 2 read -s 3584
+0.024279
+tracking -c 2 read -s 3584
+0.026538
+disparity -c 2 read -s 3712
+0.049950
+mser -c 2 read -s 3712
+0.024915
+tracking -c 2 read -s 3712
+0.026565
+disparity -c 2 read -s 3840
+0.050329
+mser -c 2 read -s 3840
+0.025372
+tracking -c 2 read -s 3840
+0.026697
+disparity -c 2 read -s 3968
+0.048640
+mser -c 2 read -s 3968
+0.026086
+tracking -c 2 read -s 3968
+0.026768
+disparity -c 2 read -s 4096
+0.049032
+mser -c 2 read -s 4096
+0.026680
+tracking -c 2 read -s 4096
+0.026775
+disparity -c 2 read -s 4608
+0.052555
+mser -c 2 read -s 4608
+0.028809
+tracking -c 2 read -s 4608
+0.026928
+disparity -c 2 read -s 5120
+0.050130
+mser -c 2 read -s 5120
+0.029050
+tracking -c 2 read -s 5120
+0.026855
+disparity -c 2 read -s 5632
+0.053327
+mser -c 2 read -s 5632
+0.028913
+tracking -c 2 read -s 5632
+0.026769
+disparity -c 2 read -s 6144
+0.052805
+mser -c 2 read -s 6144
+0.028691
+tracking -c 2 read -s 6144
+0.026809
+disparity -c 2 read -s 6656
+0.050210
+mser -c 2 read -s 6656
+0.028534
+tracking -c 2 read -s 6656
+0.026793
+disparity -c 2 read -s 7168
+0.048723
+mser -c 2 read -s 7168
+0.027806
+tracking -c 2 read -s 7168
+0.026741
+disparity -c 2 read -s 7680
+0.048062
+mser -c 2 read -s 7680
+0.026900
+tracking -c 2 read -s 7680
+0.026652
+disparity -c 2 read -s 8192
+0.051279
+mser -c 2 read -s 8192
+0.026361
+tracking -c 2 read -s 8192
+0.026621
+disparity -c 2 write -s 8
+0.039919
+mser -c 2 write -s 8
+0.017084
+tracking -c 2 write -s 8
+0.025685
+disparity -c 2 write -s 16
+0.039665
+mser -c 2 write -s 16
+0.017790
+tracking -c 2 write -s 16
+0.025641
+disparity -c 2 write -s 24
+0.039585
+mser -c 2 write -s 24
+0.017958
+tracking -c 2 write -s 24
+0.025619
+disparity -c 2 write -s 32
+0.039725
+mser -c 2 write -s 32
+0.017645
+tracking -c 2 write -s 32
+0.025680
+disparity -c 2 write -s 40
+0.039853
+mser -c 2 write -s 40
+0.017407
+tracking -c 2 write -s 40
+0.025662
+disparity -c 2 write -s 48
+0.039984
+mser -c 2 write -s 48
+0.017421
+tracking -c 2 write -s 48
+0.025648
+disparity -c 2 write -s 56
+0.039898
+mser -c 2 write -s 56
+0.017873
+tracking -c 2 write -s 56
+0.025684
+disparity -c 2 write -s 64
+0.039935
+mser -c 2 write -s 64
+0.017540
+tracking -c 2 write -s 64
+0.025638
+disparity -c 2 write -s 96
+0.039903
+mser -c 2 write -s 96
+0.017655
+tracking -c 2 write -s 96
+0.025700
+disparity -c 2 write -s 128
+0.039953
+mser -c 2 write -s 128
+0.017609
+tracking -c 2 write -s 128
+0.025657
+disparity -c 2 write -s 160
+0.040497
+mser -c 2 write -s 160
+0.017901
+tracking -c 2 write -s 160
+0.025730
+disparity -c 2 write -s 192
+0.041216
+mser -c 2 write -s 192
+0.017803
+tracking -c 2 write -s 192
+0.025702
+disparity -c 2 write -s 224
+0.042153
+mser -c 2 write -s 224
+0.017494
+tracking -c 2 write -s 224
+0.025698
+disparity -c 2 write -s 256
+0.042023
+mser -c 2 write -s 256
+0.017453
+tracking -c 2 write -s 256
+0.025662
+disparity -c 2 write -s 288
+0.040791
+mser -c 2 write -s 288
+0.017661
+tracking -c 2 write -s 288
+0.025715
+disparity -c 2 write -s 320
+0.040715
+mser -c 2 write -s 320
+0.017638
+tracking -c 2 write -s 320
+0.025804
+disparity -c 2 write -s 352
+0.040731
+mser -c 2 write -s 352
+0.017539
+tracking -c 2 write -s 352
+0.025732
+disparity -c 2 write -s 384
+0.042551
+mser -c 2 write -s 384
+0.017569
+tracking -c 2 write -s 384
+0.025762
+disparity -c 2 write -s 416
+0.042588
+mser -c 2 write -s 416
+0.017785
+tracking -c 2 write -s 416
+0.025779
+disparity -c 2 write -s 448
+0.042763
+mser -c 2 write -s 448
+0.017331
+tracking -c 2 write -s 448
+0.025750
+disparity -c 2 write -s 480
+0.042778
+mser -c 2 write -s 480
+0.017675
+tracking -c 2 write -s 480
+0.025794
+disparity -c 2 write -s 512
+0.040945
+mser -c 2 write -s 512
+0.017622
+tracking -c 2 write -s 512
+0.025764
+disparity -c 2 write -s 640
+0.042614
+mser -c 2 write -s 640
+0.017812
+tracking -c 2 write -s 640
+0.025755
+disparity -c 2 write -s 768
+0.042986
+mser -c 2 write -s 768
+0.017280
+tracking -c 2 write -s 768
+0.025720
+disparity -c 2 write -s 896
+0.040947
+mser -c 2 write -s 896
+0.017460
+tracking -c 2 write -s 896
+0.025778
+disparity -c 2 write -s 1024
+0.042891
+mser -c 2 write -s 1024
+0.017536
+tracking -c 2 write -s 1024
+0.025743
+disparity -c 2 write -s 1152
+0.043066
+mser -c 2 write -s 1152
+0.017364
+tracking -c 2 write -s 1152
+0.025813
+disparity -c 2 write -s 1280
+0.043098
+mser -c 2 write -s 1280
+0.017584
+tracking -c 2 write -s 1280
+0.025822
+disparity -c 2 write -s 1408
+0.043215
+mser -c 2 write -s 1408
+0.017522
+tracking -c 2 write -s 1408
+0.025787
+disparity -c 2 write -s 1536
+0.041364
+mser -c 2 write -s 1536
+0.017652
+tracking -c 2 write -s 1536
+0.025813
+disparity -c 2 write -s 1664
+0.042222
+mser -c 2 write -s 1664
+0.017387
+tracking -c 2 write -s 1664
+0.025814
+disparity -c 2 write -s 1792
+0.043854
+mser -c 2 write -s 1792
+0.017834
+tracking -c 2 write -s 1792
+0.025917
+disparity -c 2 write -s 1920
+0.044378
+mser -c 2 write -s 1920
+0.017979
+tracking -c 2 write -s 1920
+0.025982
+disparity -c 2 write -s 2048
+0.043277
+mser -c 2 write -s 2048
+0.017960
+tracking -c 2 write -s 2048
+0.025955
+disparity -c 2 write -s 2176
+0.044503
+mser -c 2 write -s 2176
+0.018480
+tracking -c 2 write -s 2176
+0.026139
+disparity -c 2 write -s 2304
+0.046308
+mser -c 2 write -s 2304
+0.018798
+tracking -c 2 write -s 2304
+0.026153
+disparity -c 2 write -s 2432
+0.047436
+mser -c 2 write -s 2432
+0.019224
+tracking -c 2 write -s 2432
+0.026133
+disparity -c 2 write -s 2560
+0.048052
+mser -c 2 write -s 2560
+0.019316
+tracking -c 2 write -s 2560
+0.026268
+disparity -c 2 write -s 2688
+0.048888
+mser -c 2 write -s 2688
+0.019393
+tracking -c 2 write -s 2688
+0.026391
+disparity -c 2 write -s 2816
+0.049089
+mser -c 2 write -s 2816
+0.019841
+tracking -c 2 write -s 2816
+0.026453
+disparity -c 2 write -s 2944
+0.048316
+mser -c 2 write -s 2944
+0.020112
+tracking -c 2 write -s 2944
+0.026536
+disparity -c 2 write -s 3072
+0.048753
+mser -c 2 write -s 3072
+0.020293
+tracking -c 2 write -s 3072
+0.026537
+disparity -c 2 write -s 3200
+0.049342
+mser -c 2 write -s 3200
+0.020594
+tracking -c 2 write -s 3200
+0.026510
+disparity -c 2 write -s 3328
+0.049827
+mser -c 2 write -s 3328
+0.020453
+tracking -c 2 write -s 3328
+0.026481
+disparity -c 2 write -s 3456
+0.051443
+mser -c 2 write -s 3456
+0.020597
+tracking -c 2 write -s 3456
+0.026562
+disparity -c 2 write -s 3584
+0.050979
+mser -c 2 write -s 3584
+0.020744
+tracking -c 2 write -s 3584
+0.026651
+disparity -c 2 write -s 3712
+0.052381
+mser -c 2 write -s 3712
+0.020930
+tracking -c 2 write -s 3712
+0.026747
+disparity -c 2 write -s 3840
+0.052632
+mser -c 2 write -s 3840
+0.021179
+tracking -c 2 write -s 3840
+0.026668
+disparity -c 2 write -s 3968
+0.051255
+mser -c 2 write -s 3968
+0.021440
+tracking -c 2 write -s 3968
+0.026730
+disparity -c 2 write -s 4096
+0.052685
+mser -c 2 write -s 4096
+0.021792
+tracking -c 2 write -s 4096
+0.026656
+disparity -c 2 write -s 4608
+0.052453
+mser -c 2 write -s 4608
+0.022042
+tracking -c 2 write -s 4608
+0.026812
+disparity -c 2 write -s 5120
+0.054694
+mser -c 2 write -s 5120
+0.022492
+tracking -c 2 write -s 5120
+0.026843
+disparity -c 2 write -s 5632
+0.054984
+mser -c 2 write -s 5632
+0.022622
+tracking -c 2 write -s 5632
+0.026875
+disparity -c 2 write -s 6144
+0.054289
+mser -c 2 write -s 6144
+0.023120
+tracking -c 2 write -s 6144
+0.026855
+disparity -c 2 write -s 6656
+0.054370
+mser -c 2 write -s 6656
+0.022999
+tracking -c 2 write -s 6656
+0.026948
+disparity -c 2 write -s 7168
+0.054530
+mser -c 2 write -s 7168
+0.023018
+tracking -c 2 write -s 7168
+0.026930
+disparity -c 2 write -s 7680
+0.056273
+mser -c 2 write -s 7680
+0.022941
+tracking -c 2 write -s 7680
+0.026962
+disparity -c 2 write -s 8192
+0.055276
+mser -c 2 write -s 8192
+0.023092
+tracking -c 2 write -s 8192
+0.027005
+disparity -c 2 modify -s 8
+0.039688
+mser -c 2 modify -s 8
+0.017707
+tracking -c 2 modify -s 8
+0.025662
+disparity -c 2 modify -s 16
+0.039918
+mser -c 2 modify -s 16
+0.017652
+tracking -c 2 modify -s 16
+0.025671
+disparity -c 2 modify -s 24
+0.039914
+mser -c 2 modify -s 24
+0.017600
+tracking -c 2 modify -s 24
+0.025647
+disparity -c 2 modify -s 32
+0.039897
+mser -c 2 modify -s 32
+0.017853
+tracking -c 2 modify -s 32
+0.025651
+disparity -c 2 modify -s 40
+0.040184
+mser -c 2 modify -s 40
+0.017405
+tracking -c 2 modify -s 40
+0.025652
+disparity -c 2 modify -s 48
+0.039574
+mser -c 2 modify -s 48
+0.017171
+tracking -c 2 modify -s 48
+0.025650
+disparity -c 2 modify -s 56
+0.040115
+mser -c 2 modify -s 56
+0.017800
+tracking -c 2 modify -s 56
+0.025589
+disparity -c 2 modify -s 64
+0.040012
+mser -c 2 modify -s 64
+0.017947
+tracking -c 2 modify -s 64
+0.025654
+disparity -c 2 modify -s 96
+0.040055
+mser -c 2 modify -s 96
+0.017888
+tracking -c 2 modify -s 96
+0.025691
+disparity -c 2 modify -s 128
+0.040270
+mser -c 2 modify -s 128
+0.017495
+tracking -c 2 modify -s 128
+0.025640
+disparity -c 2 modify -s 160
+0.041479
+mser -c 2 modify -s 160
+0.017760
+tracking -c 2 modify -s 160
+0.025665
+disparity -c 2 modify -s 192
+0.040709
+mser -c 2 modify -s 192
+0.017735
+tracking -c 2 modify -s 192
+0.025721
+disparity -c 2 modify -s 224
+0.040571
+mser -c 2 modify -s 224
+0.017609
+tracking -c 2 modify -s 224
+0.025715
+disparity -c 2 modify -s 256
+0.040714
+mser -c 2 modify -s 256
+0.017988
+tracking -c 2 modify -s 256
+0.025737
+disparity -c 2 modify -s 288
+0.042542
+mser -c 2 modify -s 288
+0.017705
+tracking -c 2 modify -s 288
+0.025704
+disparity -c 2 modify -s 320
+0.042466
+mser -c 2 modify -s 320
+0.017712
+tracking -c 2 modify -s 320
+0.025695
+disparity -c 2 modify -s 352
+0.040835
+mser -c 2 modify -s 352
+0.017927
+tracking -c 2 modify -s 352
+0.025683
+disparity -c 2 modify -s 384
+0.042516
+mser -c 2 modify -s 384
+0.017794
+tracking -c 2 modify -s 384
+0.025703
+disparity -c 2 modify -s 416
+0.042547
+mser -c 2 modify -s 416
+0.018049
+tracking -c 2 modify -s 416
+0.025691
+disparity -c 2 modify -s 448
+0.042533
+mser -c 2 modify -s 448
+0.018158
+tracking -c 2 modify -s 448
+0.025724
+disparity -c 2 modify -s 480
+0.042468
+mser -c 2 modify -s 480
+0.017905
+tracking -c 2 modify -s 480
+0.025769
+disparity -c 2 modify -s 512
+0.040822
+mser -c 2 modify -s 512
+0.017807
+tracking -c 2 modify -s 512
+0.025669
+disparity -c 2 modify -s 640
+0.042498
+mser -c 2 modify -s 640
+0.017820
+tracking -c 2 modify -s 640
+0.025738
+disparity -c 2 modify -s 768
+0.041039
+mser -c 2 modify -s 768
+0.018182
+tracking -c 2 modify -s 768
+0.025721
+disparity -c 2 modify -s 896
+0.042539
+mser -c 2 modify -s 896
+0.018177
+tracking -c 2 modify -s 896
+0.025722
+disparity -c 2 modify -s 1024
+0.040902
+mser -c 2 modify -s 1024
+0.017956
+tracking -c 2 modify -s 1024
+0.025755
+disparity -c 2 modify -s 1152
+0.042548
+mser -c 2 modify -s 1152
+0.017896
+tracking -c 2 modify -s 1152
+0.025719
+disparity -c 2 modify -s 1280
+0.041281
+mser -c 2 modify -s 1280
+0.018415
+tracking -c 2 modify -s 1280
+0.025785
+disparity -c 2 modify -s 1408
+0.042751
+mser -c 2 modify -s 1408
+0.018155
+tracking -c 2 modify -s 1408
+0.025781
+disparity -c 2 modify -s 1536
+0.042709
+mser -c 2 modify -s 1536
+0.018322
+tracking -c 2 modify -s 1536
+0.025762
+disparity -c 2 modify -s 1664
+0.042928
+mser -c 2 modify -s 1664
+0.018555
+tracking -c 2 modify -s 1664
+0.025804
+disparity -c 2 modify -s 1792
+0.043076
+mser -c 2 modify -s 1792
+0.018662
+tracking -c 2 modify -s 1792
+0.025810
+disparity -c 2 modify -s 1920
+0.043344
+mser -c 2 modify -s 1920
+0.018734
+tracking -c 2 modify -s 1920
+0.025824
+disparity -c 2 modify -s 2048
+0.043585
+mser -c 2 modify -s 2048
+0.018990
+tracking -c 2 modify -s 2048
+0.025839
+disparity -c 2 modify -s 2176
+0.043870
+mser -c 2 modify -s 2176
+0.019416
+tracking -c 2 modify -s 2176
+0.025894
+disparity -c 2 modify -s 2304
+0.042852
+mser -c 2 modify -s 2304
+0.019249
+tracking -c 2 modify -s 2304
+0.025894
+disparity -c 2 modify -s 2432
+0.044469
+mser -c 2 modify -s 2432
+0.019577
+tracking -c 2 modify -s 2432
+0.025912
+disparity -c 2 modify -s 2560
+0.044786
+mser -c 2 modify -s 2560
+0.020035
+tracking -c 2 modify -s 2560
+0.025974
+disparity -c 2 modify -s 2688
+0.044176
+mser -c 2 modify -s 2688
+0.020279
+tracking -c 2 modify -s 2688
+0.025965
+disparity -c 2 modify -s 2816
+0.045305
+mser -c 2 modify -s 2816
+0.020573
+tracking -c 2 modify -s 2816
+0.026040
+disparity -c 2 modify -s 2944
+0.044705
+mser -c 2 modify -s 2944
+0.020893
+tracking -c 2 modify -s 2944
+0.025988
+disparity -c 2 modify -s 3072
+0.043995
+mser -c 2 modify -s 3072
+0.021122
+tracking -c 2 modify -s 3072
+0.026026
+disparity -c 2 modify -s 3200
+0.044827
+mser -c 2 modify -s 3200
+0.021659
+tracking -c 2 modify -s 3200
+0.026054
+disparity -c 2 modify -s 3328
+0.044905
+mser -c 2 modify -s 3328
+0.022214
+tracking -c 2 modify -s 3328
+0.026086
+disparity -c 2 modify -s 3456
+0.046204
+mser -c 2 modify -s 3456
+0.022709
+tracking -c 2 modify -s 3456
+0.026142
+disparity -c 2 modify -s 3584
+0.044872
+mser -c 2 modify -s 3584
+0.023247
+tracking -c 2 modify -s 3584
+0.026135
+disparity -c 2 modify -s 3712
+0.045612
+mser -c 2 modify -s 3712
+0.024109
+tracking -c 2 modify -s 3712
+0.026267
+disparity -c 2 modify -s 3840
+0.045944
+mser -c 2 modify -s 3840
+0.024309
+tracking -c 2 modify -s 3840
+0.026127
+disparity -c 2 modify -s 3968
+0.045939
+mser -c 2 modify -s 3968
+0.024730
+tracking -c 2 modify -s 3968
+0.026270
+disparity -c 2 modify -s 4096
+0.047224
+mser -c 2 modify -s 4096
+0.024990
+tracking -c 2 modify -s 4096
+0.026285
+disparity -c 2 modify -s 4608
+0.046676
+mser -c 2 modify -s 4608
+0.026984
+tracking -c 2 modify -s 4608
+0.026361
+disparity -c 2 modify -s 5120
+0.046211
+mser -c 2 modify -s 5120
+0.028408
+tracking -c 2 modify -s 5120
+0.026438
+disparity -c 2 modify -s 5632
+0.044828
+mser -c 2 modify -s 5632
+0.028253
+tracking -c 2 modify -s 5632
+0.026476
+disparity -c 2 modify -s 6144
+0.044431
+mser -c 2 modify -s 6144
+0.027911
+tracking -c 2 modify -s 6144
+0.026378
+disparity -c 2 modify -s 6656
+0.047286
+mser -c 2 modify -s 6656
+0.027982
+tracking -c 2 modify -s 6656
+0.026357
+disparity -c 2 modify -s 7168
+0.046074
+mser -c 2 modify -s 7168
+0.027763
+tracking -c 2 modify -s 7168
+0.026308
+disparity -c 2 modify -s 7680
+0.045836
+mser -c 2 modify -s 7680
+0.027774
+tracking -c 2 modify -s 7680
+0.026408
+disparity -c 2 modify -s 8192
+0.047265
+mser -c 2 modify -s 8192
+0.027607
+tracking -c 2 modify -s 8192
+0.026450
+disparity -c 2 prefetch_l3 -s 8
+0.041911
+mser -c 2 prefetch_l3 -s 8
+0.017627
+tracking -c 2 prefetch_l3 -s 8
+0.025697
+disparity -c 2 prefetch_l3 -s 16
+0.040709
+mser -c 2 prefetch_l3 -s 16
+0.017794
+tracking -c 2 prefetch_l3 -s 16
+0.025690
+disparity -c 2 prefetch_l3 -s 24
+0.042551
+mser -c 2 prefetch_l3 -s 24
+0.017506
+tracking -c 2 prefetch_l3 -s 24
+0.025688
+disparity -c 2 prefetch_l3 -s 32
+0.040675
+mser -c 2 prefetch_l3 -s 32
+0.017586
+tracking -c 2 prefetch_l3 -s 32
+0.025684
+disparity -c 2 prefetch_l3 -s 40
+0.041177
+mser -c 2 prefetch_l3 -s 40
+0.017902
+tracking -c 2 prefetch_l3 -s 40
+0.025660
+disparity -c 2 prefetch_l3 -s 48
+0.042595
+mser -c 2 prefetch_l3 -s 48
+0.017779
+tracking -c 2 prefetch_l3 -s 48
+0.025658
+disparity -c 2 prefetch_l3 -s 56
+0.041069
+mser -c 2 prefetch_l3 -s 56
+0.017752
+tracking -c 2 prefetch_l3 -s 56
+0.025684
+disparity -c 2 prefetch_l3 -s 64
+0.040799
+mser -c 2 prefetch_l3 -s 64
+0.017743
+tracking -c 2 prefetch_l3 -s 64
+0.025698
+disparity -c 2 prefetch_l3 -s 96
+0.042435
+mser -c 2 prefetch_l3 -s 96
+0.017720
+tracking -c 2 prefetch_l3 -s 96
+0.025692
+disparity -c 2 prefetch_l3 -s 128
+0.040744
+mser -c 2 prefetch_l3 -s 128
+0.017482
+tracking -c 2 prefetch_l3 -s 128
+0.025719
+disparity -c 2 prefetch_l3 -s 160
+0.042425
+mser -c 2 prefetch_l3 -s 160
+0.017739
+tracking -c 2 prefetch_l3 -s 160
+0.025690
+disparity -c 2 prefetch_l3 -s 192
+0.040899
+mser -c 2 prefetch_l3 -s 192
+0.017496
+tracking -c 2 prefetch_l3 -s 192
+0.025717
+disparity -c 2 prefetch_l3 -s 224
+0.040845
+mser -c 2 prefetch_l3 -s 224
+0.017597
+tracking -c 2 prefetch_l3 -s 224
+0.025672
+disparity -c 2 prefetch_l3 -s 256
+0.042494
+mser -c 2 prefetch_l3 -s 256
+0.017633
+tracking -c 2 prefetch_l3 -s 256
+0.025704
+disparity -c 2 prefetch_l3 -s 288
+0.040644
+mser -c 2 prefetch_l3 -s 288
+0.017564
+tracking -c 2 prefetch_l3 -s 288
+0.025705
+disparity -c 2 prefetch_l3 -s 320
+0.042395
+mser -c 2 prefetch_l3 -s 320
+0.017648
+tracking -c 2 prefetch_l3 -s 320
+0.025706
+disparity -c 2 prefetch_l3 -s 352
+0.040611
+mser -c 2 prefetch_l3 -s 352
+0.017665
+tracking -c 2 prefetch_l3 -s 352
+0.025713
+disparity -c 2 prefetch_l3 -s 384
+0.042417
+mser -c 2 prefetch_l3 -s 384
+0.017850
+tracking -c 2 prefetch_l3 -s 384
+0.025735
+disparity -c 2 prefetch_l3 -s 416
+0.040803
+mser -c 2 prefetch_l3 -s 416
+0.017828
+tracking -c 2 prefetch_l3 -s 416
+0.025698
+disparity -c 2 prefetch_l3 -s 448
+0.042483
+mser -c 2 prefetch_l3 -s 448
+0.017620
+tracking -c 2 prefetch_l3 -s 448
+0.025685
+disparity -c 2 prefetch_l3 -s 480
+0.040626
+mser -c 2 prefetch_l3 -s 480
+0.017780
+tracking -c 2 prefetch_l3 -s 480
+0.025679
+disparity -c 2 prefetch_l3 -s 512
+0.040999
+mser -c 2 prefetch_l3 -s 512
+0.017517
+tracking -c 2 prefetch_l3 -s 512
+0.025690
+disparity -c 2 prefetch_l3 -s 640
+0.042488
+mser -c 2 prefetch_l3 -s 640
+0.017692
+tracking -c 2 prefetch_l3 -s 640
+0.025702
+disparity -c 2 prefetch_l3 -s 768
+0.042447
+mser -c 2 prefetch_l3 -s 768
+0.017703
+tracking -c 2 prefetch_l3 -s 768
+0.025711
+disparity -c 2 prefetch_l3 -s 896
+0.042442
+mser -c 2 prefetch_l3 -s 896
+0.017656
+tracking -c 2 prefetch_l3 -s 896
+0.025693
+disparity -c 2 prefetch_l3 -s 1024
+0.040796
+mser -c 2 prefetch_l3 -s 1024
+0.017971
+tracking -c 2 prefetch_l3 -s 1024
+0.025728
+disparity -c 2 prefetch_l3 -s 1152
+0.042663
+mser -c 2 prefetch_l3 -s 1152
+0.018403
+tracking -c 2 prefetch_l3 -s 1152
+0.025718
+disparity -c 2 prefetch_l3 -s 1280
+0.043271
+mser -c 2 prefetch_l3 -s 1280
+0.018628
+tracking -c 2 prefetch_l3 -s 1280
+0.025762
+disparity -c 2 prefetch_l3 -s 1408
+0.043675
+mser -c 2 prefetch_l3 -s 1408
+0.018843
+tracking -c 2 prefetch_l3 -s 1408
+0.025843
+disparity -c 2 prefetch_l3 -s 1536
+0.044095
+mser -c 2 prefetch_l3 -s 1536
+0.019843
+tracking -c 2 prefetch_l3 -s 1536
+0.025949
+disparity -c 2 prefetch_l3 -s 1664
+0.047172
+mser -c 2 prefetch_l3 -s 1664
+0.020755
+tracking -c 2 prefetch_l3 -s 1664
+0.026338
+disparity -c 2 prefetch_l3 -s 1792
+0.049542
+mser -c 2 prefetch_l3 -s 1792
+0.022395
+tracking -c 2 prefetch_l3 -s 1792
+0.026775
+disparity -c 2 prefetch_l3 -s 1920
+0.050494
+mser -c 2 prefetch_l3 -s 1920
+0.024230
+tracking -c 2 prefetch_l3 -s 1920
+0.026985
+disparity -c 2 prefetch_l3 -s 2048
+0.051682
+mser -c 2 prefetch_l3 -s 2048
+0.025255
+tracking -c 2 prefetch_l3 -s 2048
+0.027079
+disparity -c 2 prefetch_l3 -s 2176
+0.054617
+mser -c 2 prefetch_l3 -s 2176
+0.025904
+tracking -c 2 prefetch_l3 -s 2176
+0.027065
+disparity -c 2 prefetch_l3 -s 2304
+0.056008
+mser -c 2 prefetch_l3 -s 2304
+0.027166
+tracking -c 2 prefetch_l3 -s 2304
+0.027284
+disparity -c 2 prefetch_l3 -s 2432
+0.057779
+mser -c 2 prefetch_l3 -s 2432
+0.027554
+tracking -c 2 prefetch_l3 -s 2432
+0.027297
+disparity -c 2 prefetch_l3 -s 2560
+0.056829
+mser -c 2 prefetch_l3 -s 2560
+0.028311
+tracking -c 2 prefetch_l3 -s 2560
+0.027386
+disparity -c 2 prefetch_l3 -s 2688
+0.057641
+mser -c 2 prefetch_l3 -s 2688
+0.028900
+tracking -c 2 prefetch_l3 -s 2688
+0.027560
+disparity -c 2 prefetch_l3 -s 2816
+0.056604
+mser -c 2 prefetch_l3 -s 2816
+0.028125
+tracking -c 2 prefetch_l3 -s 2816
+0.027429
+disparity -c 2 prefetch_l3 -s 2944
+0.061642
+mser -c 2 prefetch_l3 -s 2944
+0.030891
+tracking -c 2 prefetch_l3 -s 2944
+0.027752
+disparity -c 2 prefetch_l3 -s 3072
+0.060434
+mser -c 2 prefetch_l3 -s 3072
+0.029231
+tracking -c 2 prefetch_l3 -s 3072
+0.027556
+disparity -c 2 prefetch_l3 -s 3200
+0.061371
+mser -c 2 prefetch_l3 -s 3200
+0.030074
+tracking -c 2 prefetch_l3 -s 3200
+0.027543
+disparity -c 2 prefetch_l3 -s 3328
+0.059963
+mser -c 2 prefetch_l3 -s 3328
+0.031085
+tracking -c 2 prefetch_l3 -s 3328
+0.027611
+disparity -c 2 prefetch_l3 -s 3456
+0.060709
+mser -c 2 prefetch_l3 -s 3456
+0.032195
+tracking -c 2 prefetch_l3 -s 3456
+0.027743
+disparity -c 2 prefetch_l3 -s 3584
+0.063666
+mser -c 2 prefetch_l3 -s 3584
+0.032201
+tracking -c 2 prefetch_l3 -s 3584
+0.027851
+disparity -c 2 prefetch_l3 -s 3712
+0.063960
+mser -c 2 prefetch_l3 -s 3712
+0.032929
+tracking -c 2 prefetch_l3 -s 3712
+0.028004
+disparity -c 2 prefetch_l3 -s 3840
+0.065055
+mser -c 2 prefetch_l3 -s 3840
+0.032755
+tracking -c 2 prefetch_l3 -s 3840
+0.027848
+disparity -c 2 prefetch_l3 -s 3968
+0.065759
+mser -c 2 prefetch_l3 -s 3968
+0.033552
+tracking -c 2 prefetch_l3 -s 3968
+0.027913
+disparity -c 2 prefetch_l3 -s 4096
+0.066541
+mser -c 2 prefetch_l3 -s 4096
+0.034078
+tracking -c 2 prefetch_l3 -s 4096
+0.028103
+disparity -c 2 prefetch_l3 -s 4608
+0.069050
+mser -c 2 prefetch_l3 -s 4608
+0.035231
+tracking -c 2 prefetch_l3 -s 4608
+0.028127
+disparity -c 2 prefetch_l3 -s 5120
+0.067691
+mser -c 2 prefetch_l3 -s 5120
+0.036394
+tracking -c 2 prefetch_l3 -s 5120
+0.028296
+disparity -c 2 prefetch_l3 -s 5632
+0.072041
+mser -c 2 prefetch_l3 -s 5632
+0.036697
+tracking -c 2 prefetch_l3 -s 5632
+0.028339
+disparity -c 2 prefetch_l3 -s 6144
+0.072809
+mser -c 2 prefetch_l3 -s 6144
+0.035895
+tracking -c 2 prefetch_l3 -s 6144
+0.028387
+disparity -c 2 prefetch_l3 -s 6656
+0.073326
+mser -c 2 prefetch_l3 -s 6656
+0.035868
+tracking -c 2 prefetch_l3 -s 6656
+0.028467
+disparity -c 2 prefetch_l3 -s 7168
+0.070459
+mser -c 2 prefetch_l3 -s 7168
+0.036049
+tracking -c 2 prefetch_l3 -s 7168
+0.028552
+disparity -c 2 prefetch_l3 -s 7680
+0.070992
+mser -c 2 prefetch_l3 -s 7680
+0.035242
+tracking -c 2 prefetch_l3 -s 7680
+0.028573
+disparity -c 2 prefetch_l3 -s 8192
+0.074209
+mser -c 2 prefetch_l3 -s 8192
+0.035019
+tracking -c 2 prefetch_l3 -s 8192
+0.028506
+--------------------------vga--------------------------------
+-----------------------------------------------------------------
+disparity - - none -s 8
+0.136502
+mser - - none -s 8
+0.078512
+tracking - - none -s 8
+0.070633
+disparity -c 2 read -s 8
+0.136995
+mser -c 2 read -s 8
+0.077709
+tracking -c 2 read -s 8
+0.070625
+disparity -c 2 read -s 16
+0.136592
+mser -c 2 read -s 16
+0.077712
+tracking -c 2 read -s 16
+0.070643
+disparity -c 2 read -s 24
+0.136607
+mser -c 2 read -s 24
+0.077712
+tracking -c 2 read -s 24
+0.070612
+disparity -c 2 read -s 32
+0.136955
+mser -c 2 read -s 32
+0.077608
+tracking -c 2 read -s 32
+0.070719
+disparity -c 2 read -s 40
+0.136974
+mser -c 2 read -s 40
+0.077557
+tracking -c 2 read -s 40
+0.070597
+disparity -c 2 read -s 48
+0.137747
+mser -c 2 read -s 48
+0.077903
+tracking -c 2 read -s 48
+0.070685
+disparity -c 2 read -s 56
+0.136593
+mser -c 2 read -s 56
+0.077659
+tracking -c 2 read -s 56
+0.070582
+disparity -c 2 read -s 64
+0.135991
+mser -c 2 read -s 64
+0.077798
+tracking -c 2 read -s 64
+0.070600
+disparity -c 2 read -s 96
+0.137532
+mser -c 2 read -s 96
+0.078286
+tracking -c 2 read -s 96
+0.070594
+disparity -c 2 read -s 128
+0.137467
+mser -c 2 read -s 128
+0.078070
+tracking -c 2 read -s 128
+0.070523
+disparity -c 2 read -s 160
+0.136052
+mser -c 2 read -s 160
+0.078358
+tracking -c 2 read -s 160
+0.070821
+disparity -c 2 read -s 192
+0.135161
+mser -c 2 read -s 192
+0.078037
+tracking -c 2 read -s 192
+0.070793
+disparity -c 2 read -s 224
+0.134576
+mser -c 2 read -s 224
+0.078364
+tracking -c 2 read -s 224
+0.070744
+disparity -c 2 read -s 256
+0.135118
+mser -c 2 read -s 256
+0.078655
+tracking -c 2 read -s 256
+0.070653
+disparity -c 2 read -s 288
+0.135787
+mser -c 2 read -s 288
+0.078195
+tracking -c 2 read -s 288
+0.070943
+disparity -c 2 read -s 320
+0.135146
+mser -c 2 read -s 320
+0.077882
+tracking -c 2 read -s 320
+0.070886
+disparity -c 2 read -s 352
+0.134932
+mser -c 2 read -s 352
+0.078389
+tracking -c 2 read -s 352
+0.070884
+disparity -c 2 read -s 384
+0.136385
+mser -c 2 read -s 384
+0.077951
+tracking -c 2 read -s 384
+0.071035
+disparity -c 2 read -s 416
+0.136092
+mser -c 2 read -s 416
+0.078501
+tracking -c 2 read -s 416
+0.071030
+disparity -c 2 read -s 448
+0.136374
+mser -c 2 read -s 448
+0.077756
+tracking -c 2 read -s 448
+0.070874
+disparity -c 2 read -s 480
+0.136667
+mser -c 2 read -s 480
+0.078291
+tracking -c 2 read -s 480
+0.070983
+disparity -c 2 read -s 512
+0.135013
+mser -c 2 read -s 512
+0.078212
+tracking -c 2 read -s 512
+0.070898
+disparity -c 2 read -s 640
+0.137950
+mser -c 2 read -s 640
+0.078311
+tracking -c 2 read -s 640
+0.070900
+disparity -c 2 read -s 768
+0.136545
+mser -c 2 read -s 768
+0.078262
+tracking -c 2 read -s 768
+0.070906
+disparity -c 2 read -s 896
+0.134820
+mser -c 2 read -s 896
+0.078489
+tracking -c 2 read -s 896
+0.070962
+disparity -c 2 read -s 1024
+0.136541
+mser -c 2 read -s 1024
+0.077948
+tracking -c 2 read -s 1024
+0.070885
+disparity -c 2 read -s 1152
+0.135922
+mser -c 2 read -s 1152
+0.078776
+tracking -c 2 read -s 1152
+0.070928
+disparity -c 2 read -s 1280
+0.136192
+mser -c 2 read -s 1280
+0.079274
+tracking -c 2 read -s 1280
+0.070889
+disparity -c 2 read -s 1408
+0.137593
+mser -c 2 read -s 1408
+0.078662
+tracking -c 2 read -s 1408
+0.071189
+disparity -c 2 read -s 1536
+0.137400
+mser -c 2 read -s 1536
+0.079494
+tracking -c 2 read -s 1536
+0.071039
+disparity -c 2 read -s 1664
+0.139766
+mser -c 2 read -s 1664
+0.080421
+tracking -c 2 read -s 1664
+0.071129
+disparity -c 2 read -s 1792
+0.140101
+mser -c 2 read -s 1792
+0.081120
+tracking -c 2 read -s 1792
+0.071280
+disparity -c 2 read -s 1920
+0.142813
+mser -c 2 read -s 1920
+0.082140
+tracking -c 2 read -s 1920
+0.071290
+disparity -c 2 read -s 2048
+0.145281
+mser -c 2 read -s 2048
+0.083415
+tracking -c 2 read -s 2048
+0.071632
+disparity -c 2 read -s 2176
+0.145320
+mser -c 2 read -s 2176
+0.084216
+tracking -c 2 read -s 2176
+0.071676
+disparity -c 2 read -s 2304
+0.149137
+mser -c 2 read -s 2304
+0.085765
+tracking -c 2 read -s 2304
+0.071830
+disparity -c 2 read -s 2432
+0.151464
+mser -c 2 read -s 2432
+0.086978
+tracking -c 2 read -s 2432
+0.072100
+disparity -c 2 read -s 2560
+0.156539
+mser -c 2 read -s 2560
+0.088037
+tracking -c 2 read -s 2560
+0.072228
+disparity -c 2 read -s 2688
+0.160343
+mser -c 2 read -s 2688
+0.089285
+tracking -c 2 read -s 2688
+0.072333
+disparity -c 2 read -s 2816
+0.162567
+mser -c 2 read -s 2816
+0.090676
+tracking -c 2 read -s 2816
+0.072690
+disparity -c 2 read -s 2944
+0.167203
+mser -c 2 read -s 2944
+0.092016
+tracking -c 2 read -s 2944
+0.072964
+disparity -c 2 read -s 3072
+0.171706
+mser -c 2 read -s 3072
+0.092936
+tracking -c 2 read -s 3072
+0.072946
+disparity -c 2 read -s 3200
+0.176529
+mser -c 2 read -s 3200
+0.094290
+tracking -c 2 read -s 3200
+0.073141
+disparity -c 2 read -s 3328
+0.182753
+mser -c 2 read -s 3328
+0.095671
+tracking -c 2 read -s 3328
+0.073566
+disparity -c 2 read -s 3456
+0.188439
+mser -c 2 read -s 3456
+0.096790
+tracking -c 2 read -s 3456
+0.073700
+disparity -c 2 read -s 3584
+0.195998
+mser -c 2 read -s 3584
+0.098151
+tracking -c 2 read -s 3584
+0.073890
+disparity -c 2 read -s 3712
+0.202422
+mser -c 2 read -s 3712
+0.099244
+tracking -c 2 read -s 3712
+0.074400
+disparity -c 2 read -s 3840
+0.207470
+mser -c 2 read -s 3840
+0.100321
+tracking -c 2 read -s 3840
+0.074379
+disparity -c 2 read -s 3968
+0.216545
+mser -c 2 read -s 3968
+0.101541
+tracking -c 2 read -s 3968
+0.074688
+disparity -c 2 read -s 4096
+0.220333
+mser -c 2 read -s 4096
+0.103675
+tracking -c 2 read -s 4096
+0.074766
+disparity -c 2 read -s 4608
+0.236055
+mser -c 2 read -s 4608
+0.107600
+tracking -c 2 read -s 4608
+0.075202
+disparity -c 2 read -s 5120
+0.226141
+mser -c 2 read -s 5120
+0.109413
+tracking -c 2 read -s 5120
+0.074965
+disparity -c 2 read -s 5632
+0.234690
+mser -c 2 read -s 5632
+0.110325
+tracking -c 2 read -s 5632
+0.074668
+disparity -c 2 read -s 6144
+0.226503
+mser -c 2 read -s 6144
+0.109787
+tracking -c 2 read -s 6144
+0.074261
+disparity -c 2 read -s 6656
+0.231403
+mser -c 2 read -s 6656
+0.108945
+tracking -c 2 read -s 6656
+0.074244
+disparity -c 2 read -s 7168
+0.229276
+mser -c 2 read -s 7168
+0.107375
+tracking -c 2 read -s 7168
+0.073955
+disparity -c 2 read -s 7680
+0.225616
+mser -c 2 read -s 7680
+0.105694
+tracking -c 2 read -s 7680
+0.073747
+disparity -c 2 read -s 8192
+0.224477
+mser -c 2 read -s 8192
+0.102921
+tracking -c 2 read -s 8192
+0.073603
+disparity -c 2 write -s 8
+0.137938
+mser -c 2 write -s 8
+0.077851
+tracking -c 2 write -s 8
+0.070645
+disparity -c 2 write -s 16
+0.136818
+mser -c 2 write -s 16
+0.078072
+tracking -c 2 write -s 16
+0.070685
+disparity -c 2 write -s 24
+0.137467
+mser -c 2 write -s 24
+0.077500
+tracking -c 2 write -s 24
+0.070720
+disparity -c 2 write -s 32
+0.136773
+mser -c 2 write -s 32
+0.078519
+tracking -c 2 write -s 32
+0.070592
+disparity -c 2 write -s 40
+0.136304
+mser -c 2 write -s 40
+0.077701
+tracking -c 2 write -s 40
+0.070684
+disparity -c 2 write -s 48
+0.136260
+mser -c 2 write -s 48
+0.078137
+tracking -c 2 write -s 48
+0.070618
+disparity -c 2 write -s 56
+0.137846
+mser -c 2 write -s 56
+0.078172
+tracking -c 2 write -s 56
+0.070663
+disparity -c 2 write -s 64
+0.137432
+mser -c 2 write -s 64
+0.078521
+tracking -c 2 write -s 64
+0.070643
+disparity -c 2 write -s 96
+0.135678
+mser -c 2 write -s 96
+0.077477
+tracking -c 2 write -s 96
+0.070615
+disparity -c 2 write -s 128
+0.134600
+mser -c 2 write -s 128
+0.077327
+tracking -c 2 write -s 128
+0.070673
+disparity -c 2 write -s 160
+0.136068
+mser -c 2 write -s 160
+0.078066
+tracking -c 2 write -s 160
+0.070716
+disparity -c 2 write -s 192
+0.134946
+mser -c 2 write -s 192
+0.078207
+tracking -c 2 write -s 192
+0.070693
+disparity -c 2 write -s 224
+0.135698
+mser -c 2 write -s 224
+0.078085
+tracking -c 2 write -s 224
+0.070676
+disparity -c 2 write -s 256
+0.136673
+mser -c 2 write -s 256
+0.077769
+tracking -c 2 write -s 256
+0.070749
+disparity -c 2 write -s 288
+0.136154
+mser -c 2 write -s 288
+0.078230
+tracking -c 2 write -s 288
+0.070713
+disparity -c 2 write -s 320
+0.137488
+mser -c 2 write -s 320
+0.078152
+tracking -c 2 write -s 320
+0.070883
+disparity -c 2 write -s 352
+0.137698
+mser -c 2 write -s 352
+0.078205
+tracking -c 2 write -s 352
+0.070795
+disparity -c 2 write -s 384
+0.137771
+mser -c 2 write -s 384
+0.078435
+tracking -c 2 write -s 384
+0.070911
+disparity -c 2 write -s 416
+0.136421
+mser -c 2 write -s 416
+0.078837
+tracking -c 2 write -s 416
+0.071037
+disparity -c 2 write -s 448
+0.137831
+mser -c 2 write -s 448
+0.078525
+tracking -c 2 write -s 448
+0.070926
+disparity -c 2 write -s 480
+0.136276
+mser -c 2 write -s 480
+0.078688
+tracking -c 2 write -s 480
+0.070842
+disparity -c 2 write -s 512
+0.136439
+mser -c 2 write -s 512
+0.078663
+tracking -c 2 write -s 512
+0.070923
+disparity -c 2 write -s 640
+0.137982
+mser -c 2 write -s 640
+0.079073
+tracking -c 2 write -s 640
+0.071007
+disparity -c 2 write -s 768
+0.137944
+mser -c 2 write -s 768
+0.079004
+tracking -c 2 write -s 768
+0.070962
+disparity -c 2 write -s 896
+0.136857
+mser -c 2 write -s 896
+0.079142
+tracking -c 2 write -s 896
+0.071053
+disparity -c 2 write -s 1024
+0.137983
+mser -c 2 write -s 1024
+0.079203
+tracking -c 2 write -s 1024
+0.070996
+disparity -c 2 write -s 1152
+0.136621
+mser -c 2 write -s 1152
+0.079021
+tracking -c 2 write -s 1152
+0.071161
+disparity -c 2 write -s 1280
+0.138888
+mser -c 2 write -s 1280
+0.079403
+tracking -c 2 write -s 1280
+0.071032
+disparity -c 2 write -s 1408
+0.139437
+mser -c 2 write -s 1408
+0.079863
+tracking -c 2 write -s 1408
+0.071174
+disparity -c 2 write -s 1536
+0.138635
+mser -c 2 write -s 1536
+0.079911
+tracking -c 2 write -s 1536
+0.071238
+disparity -c 2 write -s 1664
+0.140638
+mser -c 2 write -s 1664
+0.080883
+tracking -c 2 write -s 1664
+0.071433
+disparity -c 2 write -s 1792
+0.141675
+mser -c 2 write -s 1792
+0.081501
+tracking -c 2 write -s 1792
+0.071483
+disparity -c 2 write -s 1920
+0.145585
+mser -c 2 write -s 1920
+0.083007
+tracking -c 2 write -s 1920
+0.071783
+disparity -c 2 write -s 2048
+0.146043
+mser -c 2 write -s 2048
+0.083889
+tracking -c 2 write -s 2048
+0.072161
+disparity -c 2 write -s 2176
+0.151382
+mser -c 2 write -s 2176
+0.085733
+tracking -c 2 write -s 2176
+0.072352
+disparity -c 2 write -s 2304
+0.153661
+mser -c 2 write -s 2304
+0.087440
+tracking -c 2 write -s 2304
+0.072832
+disparity -c 2 write -s 2432
+0.157652
+mser -c 2 write -s 2432
+0.088725
+tracking -c 2 write -s 2432
+0.072751
+disparity -c 2 write -s 2560
+0.162119
+mser -c 2 write -s 2560
+0.090244
+tracking -c 2 write -s 2560
+0.073297
+disparity -c 2 write -s 2688
+0.166357
+mser -c 2 write -s 2688
+0.091755
+tracking -c 2 write -s 2688
+0.073246
+disparity -c 2 write -s 2816
+0.166570
+mser -c 2 write -s 2816
+0.092843
+tracking -c 2 write -s 2816
+0.073406
+disparity -c 2 write -s 2944
+0.168651
+mser -c 2 write -s 2944
+0.094117
+tracking -c 2 write -s 2944
+0.073690
+disparity -c 2 write -s 3072
+0.171910
+mser -c 2 write -s 3072
+0.094876
+tracking -c 2 write -s 3072
+0.073622
+disparity -c 2 write -s 3200
+0.175475
+mser -c 2 write -s 3200
+0.096281
+tracking -c 2 write -s 3200
+0.073791
+disparity -c 2 write -s 3328
+0.177361
+mser -c 2 write -s 3328
+0.096623
+tracking -c 2 write -s 3328
+0.074210
+disparity -c 2 write -s 3456
+0.180815
+mser -c 2 write -s 3456
+0.097911
+tracking -c 2 write -s 3456
+0.074253
+disparity -c 2 write -s 3584
+0.182541
+mser -c 2 write -s 3584
+0.098284
+tracking -c 2 write -s 3584
+0.074271
+disparity -c 2 write -s 3712
+0.181326
+mser -c 2 write -s 3712
+0.098863
+tracking -c 2 write -s 3712
+0.074719
+disparity -c 2 write -s 3840
+0.189416
+mser -c 2 write -s 3840
+0.100369
+tracking -c 2 write -s 3840
+0.074226
+disparity -c 2 write -s 3968
+0.184606
+mser -c 2 write -s 3968
+0.100686
+tracking -c 2 write -s 3968
+0.074608
+disparity -c 2 write -s 4096
+0.192892
+mser -c 2 write -s 4096
+0.101010
+tracking -c 2 write -s 4096
+0.074798
+disparity -c 2 write -s 4608
+0.191179
+mser -c 2 write -s 4608
+0.103860
+tracking -c 2 write -s 4608
+0.075091
+disparity -c 2 write -s 5120
+0.199429
+mser -c 2 write -s 5120
+0.105265
+tracking -c 2 write -s 5120
+0.075305
+disparity -c 2 write -s 5632
+0.206368
+mser -c 2 write -s 5632
+0.105465
+tracking -c 2 write -s 5632
+0.075402
+disparity -c 2 write -s 6144
+0.201012
+mser -c 2 write -s 6144
+0.106275
+tracking -c 2 write -s 6144
+0.075639
+disparity -c 2 write -s 6656
+0.218153
+mser -c 2 write -s 6656
+0.106842
+tracking -c 2 write -s 6656
+0.075328
+disparity -c 2 write -s 7168
+0.223942
+mser -c 2 write -s 7168
+0.107967
+tracking -c 2 write -s 7168
+0.075618
+disparity -c 2 write -s 7680
+0.227908
+mser -c 2 write -s 7680
+0.108133
+tracking -c 2 write -s 7680
+0.075537
+disparity -c 2 write -s 8192
+0.213399
+mser -c 2 write -s 8192
+0.107946
+tracking -c 2 write -s 8192
+0.075903
+disparity -c 2 modify -s 8
+0.136094
+mser -c 2 modify -s 8
+0.077961
+tracking -c 2 modify -s 8
+0.070561
+disparity -c 2 modify -s 16
+0.136296
+mser -c 2 modify -s 16
+0.078005
+tracking -c 2 modify -s 16
+0.070587
+disparity -c 2 modify -s 24
+0.137009
+mser -c 2 modify -s 24
+0.077605
+tracking -c 2 modify -s 24
+0.070503
+disparity -c 2 modify -s 32
+0.138103
+mser -c 2 modify -s 32
+0.077918
+tracking -c 2 modify -s 32
+0.070581
+disparity -c 2 modify -s 40
+0.137985
+mser -c 2 modify -s 40
+0.078205
+tracking -c 2 modify -s 40
+0.070564
+disparity -c 2 modify -s 48
+0.136555
+mser -c 2 modify -s 48
+0.077782
+tracking -c 2 modify -s 48
+0.070754
+disparity -c 2 modify -s 56
+0.137226
+mser -c 2 modify -s 56
+0.078419
+tracking -c 2 modify -s 56
+0.070584
+disparity -c 2 modify -s 64
+0.135707
+mser -c 2 modify -s 64
+0.077900
+tracking -c 2 modify -s 64
+0.070564
+disparity -c 2 modify -s 96
+0.138157
+mser -c 2 modify -s 96
+0.077717
+tracking -c 2 modify -s 96
+0.070578
+disparity -c 2 modify -s 128
+0.137142
+mser -c 2 modify -s 128
+0.077628
+tracking -c 2 modify -s 128
+0.070648
+disparity -c 2 modify -s 160
+0.137343
+mser -c 2 modify -s 160
+0.077957
+tracking -c 2 modify -s 160
+0.070601
+disparity -c 2 modify -s 192
+0.135306
+mser -c 2 modify -s 192
+0.077755
+tracking -c 2 modify -s 192
+0.070708
+disparity -c 2 modify -s 224
+0.136246
+mser -c 2 modify -s 224
+0.078392
+tracking -c 2 modify -s 224
+0.070872
+disparity -c 2 modify -s 256
+0.135685
+mser -c 2 modify -s 256
+0.078166
+tracking -c 2 modify -s 256
+0.070684
+disparity -c 2 modify -s 288
+0.135846
+mser -c 2 modify -s 288
+0.077953
+tracking -c 2 modify -s 288
+0.070750
+disparity -c 2 modify -s 320
+0.135869
+mser -c 2 modify -s 320
+0.078625
+tracking -c 2 modify -s 320
+0.070813
+disparity -c 2 modify -s 352
+0.134453
+mser -c 2 modify -s 352
+0.078210
+tracking -c 2 modify -s 352
+0.070778
+disparity -c 2 modify -s 384
+0.136499
+mser -c 2 modify -s 384
+0.078315
+tracking -c 2 modify -s 384
+0.070890
+disparity -c 2 modify -s 416
+0.136258
+mser -c 2 modify -s 416
+0.078156
+tracking -c 2 modify -s 416
+0.070864
+disparity -c 2 modify -s 448
+0.135205
+mser -c 2 modify -s 448
+0.078651
+tracking -c 2 modify -s 448
+0.070791
+disparity -c 2 modify -s 480
+0.134855
+mser -c 2 modify -s 480
+0.078068
+tracking -c 2 modify -s 480
+0.070851
+disparity -c 2 modify -s 512
+0.134833
+mser -c 2 modify -s 512
+0.077601
+tracking -c 2 modify -s 512
+0.070709
+disparity -c 2 modify -s 640
+0.136106
+mser -c 2 modify -s 640
+0.078036
+tracking -c 2 modify -s 640
+0.070891
+disparity -c 2 modify -s 768
+0.135173
+mser -c 2 modify -s 768
+0.077596
+tracking -c 2 modify -s 768
+0.071000
+disparity -c 2 modify -s 896
+0.136515
+mser -c 2 modify -s 896
+0.078492
+tracking -c 2 modify -s 896
+0.071031
+disparity -c 2 modify -s 1024
+0.136276
+mser -c 2 modify -s 1024
+0.078086
+tracking -c 2 modify -s 1024
+0.070837
+disparity -c 2 modify -s 1152
+0.135444
+mser -c 2 modify -s 1152
+0.078759
+tracking -c 2 modify -s 1152
+0.071039
+disparity -c 2 modify -s 1280
+0.135514
+mser -c 2 modify -s 1280
+0.078541
+tracking -c 2 modify -s 1280
+0.071038
+disparity -c 2 modify -s 1408
+0.136376
+mser -c 2 modify -s 1408
+0.078774
+tracking -c 2 modify -s 1408
+0.071066
+disparity -c 2 modify -s 1536
+0.137922
+mser -c 2 modify -s 1536
+0.079094
+tracking -c 2 modify -s 1536
+0.071006
+disparity -c 2 modify -s 1664
+0.137565
+mser -c 2 modify -s 1664
+0.079910
+tracking -c 2 modify -s 1664
+0.071214
+disparity -c 2 modify -s 1792
+0.139274
+mser -c 2 modify -s 1792
+0.080809
+tracking -c 2 modify -s 1792
+0.071224
+disparity -c 2 modify -s 1920
+0.142398
+mser -c 2 modify -s 1920
+0.081797
+tracking -c 2 modify -s 1920
+0.071150
+disparity -c 2 modify -s 2048
+0.142065
+mser -c 2 modify -s 2048
+0.082997
+tracking -c 2 modify -s 2048
+0.071329
+disparity -c 2 modify -s 2176
+0.141925
+mser -c 2 modify -s 2176
+0.082654
+tracking -c 2 modify -s 2176
+0.071466
+disparity -c 2 modify -s 2304
+0.146633
+mser -c 2 modify -s 2304
+0.084892
+tracking -c 2 modify -s 2304
+0.071664
+disparity -c 2 modify -s 2432
+0.148728
+mser -c 2 modify -s 2432
+0.086114
+tracking -c 2 modify -s 2432
+0.071836
+disparity -c 2 modify -s 2560
+0.150764
+mser -c 2 modify -s 2560
+0.086144
+tracking -c 2 modify -s 2560
+0.071682
+disparity -c 2 modify -s 2688
+0.157350
+mser -c 2 modify -s 2688
+0.087154
+tracking -c 2 modify -s 2688
+0.071878
+disparity -c 2 modify -s 2816
+0.159227
+mser -c 2 modify -s 2816
+0.087902
+tracking -c 2 modify -s 2816
+0.071864
+disparity -c 2 modify -s 2944
+0.160952
+mser -c 2 modify -s 2944
+0.089422
+tracking -c 2 modify -s 2944
+0.072021
+disparity -c 2 modify -s 3072
+0.166216
+mser -c 2 modify -s 3072
+0.090197
+tracking -c 2 modify -s 3072
+0.071995
+disparity -c 2 modify -s 3200
+0.171681
+mser -c 2 modify -s 3200
+0.091695
+tracking -c 2 modify -s 3200
+0.072087
+disparity -c 2 modify -s 3328
+0.170494
+mser -c 2 modify -s 3328
+0.090522
+tracking -c 2 modify -s 3328
+0.072059
+disparity -c 2 modify -s 3456
+0.179032
+mser -c 2 modify -s 3456
+0.092727
+tracking -c 2 modify -s 3456
+0.072399
+disparity -c 2 modify -s 3584
+0.179707
+mser -c 2 modify -s 3584
+0.092670
+tracking -c 2 modify -s 3584
+0.072194
+disparity -c 2 modify -s 3712
+0.181049
+mser -c 2 modify -s 3712
+0.093729
+tracking -c 2 modify -s 3712
+0.072368
+disparity -c 2 modify -s 3840
+0.185721
+mser -c 2 modify -s 3840
+0.094536
+tracking -c 2 modify -s 3840
+0.072448
+disparity -c 2 modify -s 3968
+0.191045
+mser -c 2 modify -s 3968
+0.096108
+tracking -c 2 modify -s 3968
+0.072429
+disparity -c 2 modify -s 4096
+0.192697
+mser -c 2 modify -s 4096
+0.096757
+tracking -c 2 modify -s 4096
+0.072600
+disparity -c 2 modify -s 4608
+0.213435
+mser -c 2 modify -s 4608
+0.101383
+tracking -c 2 modify -s 4608
+0.072726
+disparity -c 2 modify -s 5120
+0.222635
+mser -c 2 modify -s 5120
+0.106001
+tracking -c 2 modify -s 5120
+0.073126
+disparity -c 2 modify -s 5632
+0.224111
+mser -c 2 modify -s 5632
+0.106701
+tracking -c 2 modify -s 5632
+0.072791
+disparity -c 2 modify -s 6144
+0.213785
+mser -c 2 modify -s 6144
+0.105651
+tracking -c 2 modify -s 6144
+0.072536
+disparity -c 2 modify -s 6656
+0.219107
+mser -c 2 modify -s 6656
+0.105256
+tracking -c 2 modify -s 6656
+0.072427
+disparity -c 2 modify -s 7168
+0.214427
+mser -c 2 modify -s 7168
+0.105900
+tracking -c 2 modify -s 7168
+0.072363
+disparity -c 2 modify -s 7680
+0.224707
+mser -c 2 modify -s 7680
+0.106042
+tracking -c 2 modify -s 7680
+0.072499
+disparity -c 2 modify -s 8192
+0.212765
+mser -c 2 modify -s 8192
+0.105811
+tracking -c 2 modify -s 8192
+0.072415
+disparity -c 2 prefetch_l3 -s 8
+0.135130
+mser -c 2 prefetch_l3 -s 8
+0.078094
+tracking -c 2 prefetch_l3 -s 8
+0.070959
+disparity -c 2 prefetch_l3 -s 16
+0.135668
+mser -c 2 prefetch_l3 -s 16
+0.077955
+tracking -c 2 prefetch_l3 -s 16
+0.070808
+disparity -c 2 prefetch_l3 -s 24
+0.134942
+mser -c 2 prefetch_l3 -s 24
+0.077804
+tracking -c 2 prefetch_l3 -s 24
+0.070919
+disparity -c 2 prefetch_l3 -s 32
+0.134712
+mser -c 2 prefetch_l3 -s 32
+0.077684
+tracking -c 2 prefetch_l3 -s 32
+0.070922
+disparity -c 2 prefetch_l3 -s 40
+0.136145
+mser -c 2 prefetch_l3 -s 40
+0.078115
+tracking -c 2 prefetch_l3 -s 40
+0.070859
+disparity -c 2 prefetch_l3 -s 48
+0.134634
+mser -c 2 prefetch_l3 -s 48
+0.078201
+tracking -c 2 prefetch_l3 -s 48
+0.070763
+disparity -c 2 prefetch_l3 -s 56
+0.135782
+mser -c 2 prefetch_l3 -s 56
+0.078110
+tracking -c 2 prefetch_l3 -s 56
+0.070998
+disparity -c 2 prefetch_l3 -s 64
+0.134711
+mser -c 2 prefetch_l3 -s 64
+0.078359
+tracking -c 2 prefetch_l3 -s 64
+0.070811
+disparity -c 2 prefetch_l3 -s 96
+0.135782
+mser -c 2 prefetch_l3 -s 96
+0.078482
+tracking -c 2 prefetch_l3 -s 96
+0.070675
+disparity -c 2 prefetch_l3 -s 128
+0.134912
+mser -c 2 prefetch_l3 -s 128
+0.078212
+tracking -c 2 prefetch_l3 -s 128
+0.070811
+disparity -c 2 prefetch_l3 -s 160
+0.134978
+mser -c 2 prefetch_l3 -s 160
+0.078472
+tracking -c 2 prefetch_l3 -s 160
+0.070857
+disparity -c 2 prefetch_l3 -s 192
+0.134723
+mser -c 2 prefetch_l3 -s 192
+0.077906
+tracking -c 2 prefetch_l3 -s 192
+0.070806
+disparity -c 2 prefetch_l3 -s 224
+0.135809
+mser -c 2 prefetch_l3 -s 224
+0.078122
+tracking -c 2 prefetch_l3 -s 224
+0.070820
+disparity -c 2 prefetch_l3 -s 256
+0.135780
+mser -c 2 prefetch_l3 -s 256
+0.078483
+tracking -c 2 prefetch_l3 -s 256
+0.070720
+disparity -c 2 prefetch_l3 -s 288
+0.134839
+mser -c 2 prefetch_l3 -s 288
+0.078532
+tracking -c 2 prefetch_l3 -s 288
+0.070857
+disparity -c 2 prefetch_l3 -s 320
+0.136194
+mser -c 2 prefetch_l3 -s 320
+0.078077
+tracking -c 2 prefetch_l3 -s 320
+0.070734
+disparity -c 2 prefetch_l3 -s 352
+0.135604
+mser -c 2 prefetch_l3 -s 352
+0.078226
+tracking -c 2 prefetch_l3 -s 352
+0.070949
+disparity -c 2 prefetch_l3 -s 384
+0.134410
+mser -c 2 prefetch_l3 -s 384
+0.078314
+tracking -c 2 prefetch_l3 -s 384
+0.070750
+disparity -c 2 prefetch_l3 -s 416
+0.135854
+mser -c 2 prefetch_l3 -s 416
+0.078067
+tracking -c 2 prefetch_l3 -s 416
+0.070821
+disparity -c 2 prefetch_l3 -s 448
+0.135488
+mser -c 2 prefetch_l3 -s 448
+0.077933
+tracking -c 2 prefetch_l3 -s 448
+0.070840
+disparity -c 2 prefetch_l3 -s 480
+0.134658
+mser -c 2 prefetch_l3 -s 480
+0.078177
+tracking -c 2 prefetch_l3 -s 480
+0.070773
+disparity -c 2 prefetch_l3 -s 512
+0.134451
+mser -c 2 prefetch_l3 -s 512
+0.078694
+tracking -c 2 prefetch_l3 -s 512
+0.070997
+disparity -c 2 prefetch_l3 -s 640
+0.134457
+mser -c 2 prefetch_l3 -s 640
+0.077598
+tracking -c 2 prefetch_l3 -s 640
+0.070732
+disparity -c 2 prefetch_l3 -s 768
+0.135564
+mser -c 2 prefetch_l3 -s 768
+0.078117
+tracking -c 2 prefetch_l3 -s 768
+0.070766
+disparity -c 2 prefetch_l3 -s 896
+0.135962
+mser -c 2 prefetch_l3 -s 896
+0.078155
+tracking -c 2 prefetch_l3 -s 896
+0.070958
+disparity -c 2 prefetch_l3 -s 1024
+0.136544
+mser -c 2 prefetch_l3 -s 1024
+0.078592
+tracking -c 2 prefetch_l3 -s 1024
+0.070959
+disparity -c 2 prefetch_l3 -s 1152
+0.136708
+mser -c 2 prefetch_l3 -s 1152
+0.079741
+tracking -c 2 prefetch_l3 -s 1152
+0.070900
+disparity -c 2 prefetch_l3 -s 1280
+0.139937
+mser -c 2 prefetch_l3 -s 1280
+0.081122
+tracking -c 2 prefetch_l3 -s 1280
+0.071031
+disparity -c 2 prefetch_l3 -s 1408
+0.146839
+mser -c 2 prefetch_l3 -s 1408
+0.083161
+tracking -c 2 prefetch_l3 -s 1408
+0.071530
+disparity -c 2 prefetch_l3 -s 1536
+0.150131
+mser -c 2 prefetch_l3 -s 1536
+0.085489
+tracking -c 2 prefetch_l3 -s 1536
+0.071833
+disparity -c 2 prefetch_l3 -s 1664
+0.154361
+mser -c 2 prefetch_l3 -s 1664
+0.088948
+tracking -c 2 prefetch_l3 -s 1664
+0.072315
+disparity -c 2 prefetch_l3 -s 1792
+0.186182
+mser -c 2 prefetch_l3 -s 1792
+0.098044
+tracking -c 2 prefetch_l3 -s 1792
+0.074241
+disparity -c 2 prefetch_l3 -s 1920
+0.239287
+mser -c 2 prefetch_l3 -s 1920
+0.106811
+tracking -c 2 prefetch_l3 -s 1920
+0.076082
+disparity -c 2 prefetch_l3 -s 2048
+0.259858
+mser -c 2 prefetch_l3 -s 2048
+0.111474
+tracking -c 2 prefetch_l3 -s 2048
+0.077021
+disparity -c 2 prefetch_l3 -s 2176
+0.280259
+mser -c 2 prefetch_l3 -s 2176
+0.116672
+tracking -c 2 prefetch_l3 -s 2176
+0.077617
+disparity -c 2 prefetch_l3 -s 2304
+0.300654
+mser -c 2 prefetch_l3 -s 2304
+0.119327
+tracking -c 2 prefetch_l3 -s 2304
+0.077380
+disparity -c 2 prefetch_l3 -s 2432
+0.322696
+mser -c 2 prefetch_l3 -s 2432
+0.121661
+tracking -c 2 prefetch_l3 -s 2432
+0.077688
+disparity -c 2 prefetch_l3 -s 2560
+0.335644
+mser -c 2 prefetch_l3 -s 2560
+0.121999
+tracking -c 2 prefetch_l3 -s 2560
+0.078054
+disparity -c 2 prefetch_l3 -s 2688
+0.294594
+mser -c 2 prefetch_l3 -s 2688
+0.117355
+tracking -c 2 prefetch_l3 -s 2688
+0.077207
+disparity -c 2 prefetch_l3 -s 2816
+0.351173
+mser -c 2 prefetch_l3 -s 2816
+0.124831
+tracking -c 2 prefetch_l3 -s 2816
+0.078468
+disparity -c 2 prefetch_l3 -s 2944
+0.359364
+mser -c 2 prefetch_l3 -s 2944
+0.125657
+tracking -c 2 prefetch_l3 -s 2944
+0.078557
+disparity -c 2 prefetch_l3 -s 3072
+0.337949
+mser -c 2 prefetch_l3 -s 3072
+0.122307
+tracking -c 2 prefetch_l3 -s 3072
+0.078303
+disparity -c 2 prefetch_l3 -s 3200
+0.380237
+mser -c 2 prefetch_l3 -s 3200
+0.127188
+tracking -c 2 prefetch_l3 -s 3200
+0.078722
+disparity -c 2 prefetch_l3 -s 3328
+0.393629
+mser -c 2 prefetch_l3 -s 3328
+0.127730
+tracking -c 2 prefetch_l3 -s 3328
+0.079006
+disparity -c 2 prefetch_l3 -s 3456
+0.390377
+mser -c 2 prefetch_l3 -s 3456
+0.124016
+tracking -c 2 prefetch_l3 -s 3456
+0.078674
+disparity -c 2 prefetch_l3 -s 3584
+0.404586
+mser -c 2 prefetch_l3 -s 3584
+0.126116
+tracking -c 2 prefetch_l3 -s 3584
+0.078673
+disparity -c 2 prefetch_l3 -s 3712
+0.410593
+mser -c 2 prefetch_l3 -s 3712
+0.126435
+tracking -c 2 prefetch_l3 -s 3712
+0.079073
+disparity -c 2 prefetch_l3 -s 3840
+0.419021
+mser -c 2 prefetch_l3 -s 3840
+0.127081
+tracking -c 2 prefetch_l3 -s 3840
+0.078844
+disparity -c 2 prefetch_l3 -s 3968
+0.411780
+mser -c 2 prefetch_l3 -s 3968
+0.128503
+tracking -c 2 prefetch_l3 -s 3968
+0.079294
+disparity -c 2 prefetch_l3 -s 4096
+0.426951
+mser -c 2 prefetch_l3 -s 4096
+0.129805
+tracking -c 2 prefetch_l3 -s 4096
+0.078818
+disparity -c 2 prefetch_l3 -s 4608
+0.479130
+mser -c 2 prefetch_l3 -s 4608
+0.135213
+tracking -c 2 prefetch_l3 -s 4608
+0.079482
+disparity -c 2 prefetch_l3 -s 5120
+0.494754
+mser -c 2 prefetch_l3 -s 5120
+0.137749
+tracking -c 2 prefetch_l3 -s 5120
+0.079749
+disparity -c 2 prefetch_l3 -s 5632
+0.480568
+mser -c 2 prefetch_l3 -s 5632
+0.137707
+tracking -c 2 prefetch_l3 -s 5632
+0.079379
+disparity -c 2 prefetch_l3 -s 6144
+0.487266
+mser -c 2 prefetch_l3 -s 6144
+0.137600
+tracking -c 2 prefetch_l3 -s 6144
+0.079585
+disparity -c 2 prefetch_l3 -s 6656
+0.465644
+mser -c 2 prefetch_l3 -s 6656
+0.135917
+tracking -c 2 prefetch_l3 -s 6656
+0.080135
+disparity -c 2 prefetch_l3 -s 7168
+0.478897
+mser -c 2 prefetch_l3 -s 7168
+0.135494
+tracking -c 2 prefetch_l3 -s 7168
+0.079724
+disparity -c 2 prefetch_l3 -s 7680
+0.468248
+mser -c 2 prefetch_l3 -s 7680
+0.133874
+tracking -c 2 prefetch_l3 -s 7680
+0.079664
+disparity -c 2 prefetch_l3 -s 8192
+0.465505
+mser -c 2 prefetch_l3 -s 8192
+0.133276
+tracking -c 2 prefetch_l3 -s 8192
+0.080073
