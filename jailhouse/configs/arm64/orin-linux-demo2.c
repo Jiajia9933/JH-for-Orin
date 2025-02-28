@@ -57,7 +57,8 @@ struct {
 	},
 
 	.cpus = {
-		0b000000000010,	/* use cpu 1 */
+		0b000000010000,	/* use cpu 1 for same cluster, 
+		or cpu 4 for different cluster   */
 	},
 
 	.mem_regions = {
@@ -124,7 +125,9 @@ struct {
 			         JAILHOUSE_MEM_LOADABLE | JAILHOUSE_MEM_COLORED,
 			// .colors = 0xffff0000,
 			// .colors = 0x000000ff,
-			.colors = 0xffffff00,
+			// .colors = 0xffffff00,
+
+			.colors = 0xffffffff00000000,
 
 		},
 

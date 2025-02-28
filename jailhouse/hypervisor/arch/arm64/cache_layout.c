@@ -56,6 +56,7 @@ u64 arm_cache_layout_detect(void)
 	unsigned int n;
 	unsigned llc = 0;
 	u64 type, assoc, ls, sets;
+	int l4added = 0;
 
 	arm_read_sysreg(clidr_el1, reg);
 
@@ -66,15 +67,20 @@ u64 arm_cache_layout_detect(void)
 	}
 	verb_print("\tmax cache level = %u\n", max_cache_level);
 
-	for (n = 0; n < max_cache_level; ++n) {
+	for (n = 0; n < max_cache_level+1; ++n) {
 		cache[n].way_size = 0;
 		cache[n].level = -1;
 
 		type = CLIDR_CTYPE(reg, n);
 		verb_print("\tL%d Cache Type: %s\n", n + 1, cache_types[type]);
 
-		if (type == CLIDR_CTYPE_NOCACHE)
-			continue;
+		if (type == CLIDR_CTYPE_NOCACHE) {
+			if (l4added)
+			    continue;
+	        l4added = 1;
+            goto fakel4cache;	
+		}
+			
 
 		/* Save the last seen available level of cache */
 		llc = n;
@@ -87,6 +93,15 @@ u64 arm_cache_layout_detect(void)
 		ls = 1 << (4 + CCSIDR_LINE_SIZE(geom));
 		assoc = CCSIDR_ASSOC(geom) + 1;
 		sets = CCSIDR_NUM_SETS(geom) + 1;
+
+		if (0) {
+fakel4cache:
+			ls = 64;
+			assoc = 16;
+			sets = 4096;
+			type = CLIDR_CTYPE_UNIFIED;
+			llc = n;
+		}
 
 		/* Only keep track of dcache information */
 		cache[n].level = n;

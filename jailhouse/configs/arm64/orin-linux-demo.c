@@ -132,7 +132,10 @@ struct {
 			         JAILHOUSE_MEM_LOADABLE | JAILHOUSE_MEM_COLORED,
 			// .colors = 0x0000ffff,
 			// .colors = 0xffffff00,
-			.colors = 0x000000ff,
+			// .colors = 0x000000ff,
+
+			.colors = 0x00000000ffffffff,
+
 			
 		},
 
