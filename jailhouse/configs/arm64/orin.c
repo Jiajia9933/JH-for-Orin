@@ -33,11 +33,11 @@ struct {
 			.pci_mmconfig_end_bus = 0,
 			.pci_is_virtual = 1,
 			.pci_domain = 6,
-			.color = {
-				/* autodetected if not specified */
-				//.way_size = 0x40000,
-				.root_map_offset = 0x0C000000000,
-			},
+			// .color = {
+			// 	/* autodetected if not specified */
+			// 	//.way_size = 0x40000,
+			// 	.root_map_offset = 0x0C000000000,
+			// },
 
 			.arm = {
 				.maintenance_irq = 25,	

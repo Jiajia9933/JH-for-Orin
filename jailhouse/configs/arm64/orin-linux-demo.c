@@ -123,18 +123,18 @@ struct {
 			.phys_start = 0x112c00000,
 			.virt_start = 0x112c00000,
 			.size = 0x3df00000, 
-			// .flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
-			//          JAILHOUSE_MEM_EXECUTE | JAILHOUSE_MEM_DMA |
-			//          JAILHOUSE_MEM_LOADABLE,
-
 			.flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
 			         JAILHOUSE_MEM_EXECUTE | JAILHOUSE_MEM_DMA |
-			         JAILHOUSE_MEM_LOADABLE | JAILHOUSE_MEM_COLORED,
-			// .colors = 0x0000ffff,
-			// .colors = 0xffffff00,
-			// .colors = 0x000000ff,
+			         JAILHOUSE_MEM_LOADABLE,
 
-			.colors = 0x00000000ffffffff,
+			// .flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
+			//          JAILHOUSE_MEM_EXECUTE | JAILHOUSE_MEM_DMA |
+			//          JAILHOUSE_MEM_LOADABLE | JAILHOUSE_MEM_COLORED,
+			// // .colors = 0x0000ffff,
+			// // .colors = 0xffffff00,
+			// // .colors = 0x000000ff,
+
+			// .colors = 0x00000000ffffffff,
 
 			
 		},

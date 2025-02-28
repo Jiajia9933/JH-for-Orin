@@ -57,7 +57,7 @@ struct {
 	},
 
 	.cpus = {
-		0b000000010000,	/* use cpu 1 for same cluster, 
+		0b000000000010,	/* use cpu 1 for same cluster, 
 		or cpu 4 for different cluster   */
 	},
 
@@ -116,18 +116,18 @@ struct {
 			.phys_start = 0x151400000,
 			.virt_start = 0x151400000,
 			.size = 0x0eb00000,
-			// .flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
-			//          JAILHOUSE_MEM_EXECUTE | JAILHOUSE_MEM_DMA |
-			//          JAILHOUSE_MEM_LOADABLE,
-
 			.flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
 			         JAILHOUSE_MEM_EXECUTE | JAILHOUSE_MEM_DMA |
-			         JAILHOUSE_MEM_LOADABLE | JAILHOUSE_MEM_COLORED,
-			// .colors = 0xffff0000,
-			// .colors = 0x000000ff,
-			// .colors = 0xffffff00,
+			         JAILHOUSE_MEM_LOADABLE,
 
-			.colors = 0xffffffff00000000,
+			// .flags = JAILHOUSE_MEM_READ | JAILHOUSE_MEM_WRITE |
+			//          JAILHOUSE_MEM_EXECUTE | JAILHOUSE_MEM_DMA |
+			//          JAILHOUSE_MEM_LOADABLE | JAILHOUSE_MEM_COLORED,
+			// // .colors = 0xffff0000,
+			// // .colors = 0x000000ff,
+			// // .colors = 0xffffff00,
+
+			// .colors = 0xffffffff00000000,
 
 		},
 
