@@ -57,7 +57,7 @@ struct {
 	},
 
 	.cpus = {
-		0b000000000010,	/* use cpu 1 for same cluster, 
+		0b000000010000,	/* use cpu 1 for same cluster, 
 		or cpu 4 for different cluster   */
 	},
 
