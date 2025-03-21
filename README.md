@@ -69,6 +69,21 @@ Linux_for_Tegra/source/public/modules_out/lib/modules/5.10.216-YOUR_VERSION/
 
 # To compile jailhouse
 
+### files to modify:
+1. Copy the [jailhouse_config.h](jailhouse_config.h) file to Linux_for_Tegra/source/public/jailhouse/include/jailhouse/ as "config.h" 
+
+2. Modify jailhouse/include/jailhouse/mem-bomb.h to add Jailhouse configs for the AGX Orin board:
+
+    #ifdef CONFIG_MACH_AGXORIN
+    #define NUM_CPU			12
+    #define MAIN_PHYS_BASE		0xc0300000
+    #define COMM_PHYS_BASE		0xc5300000
+    #else
+    #define NUM_CPU			8
+    #endif
+
+### Following steps to compile:
+
     cd Linux_for_Tegra/source/public/jailhouse
     export KDIR=Linux_for_Tegra/source/public/kernel/kernel-5.10/
     export DESTDIR=Linux_for_Tegra/source/public/modules_out/
