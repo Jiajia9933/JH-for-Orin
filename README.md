@@ -143,6 +143,10 @@ linux_guest/arch/arm64/boot/Image_guest\
 
 
 # Start the jailhouse root cell on the Orin board:
+with "sudo nvpmodle -m 0" you can set the nvpmodel to get all 12 CPUs online with max frequencies , see details here:
+https://docs.nvidia.com/jetson/archives/r35.5.0/DeveloperGuide/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html#cpu-power-management 
+
+    sudo nvpmodle -m 0
 
     sudo cp orin.cell /lib/firmware/
     sudo cp jailhouse.bin /lib/firmware/
