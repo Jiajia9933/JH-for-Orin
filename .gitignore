@@ -2,6 +2,11 @@
 *.sha1sum
 *.ko
 
+nvbuild.sh
+nvcommon_build.sh
+nv_public_src_build.sh
+nv_public_src_build_tos.sh
+
 jailhouse/build/
 jailhouse/pyjailhouse.egg-info/
 
