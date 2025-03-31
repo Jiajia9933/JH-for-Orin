@@ -1,0 +1,13 @@
+diff --git a/drivers/tty/serial/serial-tegra.c b/drivers/tty/serial/serial-tegra.c
+index f00ba9597..2d5d9622e 100644
+--- a/drivers/tty/serial/serial-tegra.c
++++ b/drivers/tty/serial/serial-tegra.c
+@@ -1200,7 +1200,7 @@ static void tegra_uart_hw_deinit(struct tegra_uart_port *tup)
+ 	if (!tup->use_tx_pio)
+ 		tegra_uart_dma_channel_free(tup, false);
+ 
+-	clk_disable_unprepare(tup->uart_clk);
++	//clk_disable_unprepare(tup->uart_clk);
+ }
+ 
+ static int tegra_uart_hw_init(struct tegra_uart_port *tup)

@@ -1,0 +1,37 @@
+From 0ffe68c998621a6d2d041a7ad058a55399d38ecc Mon Sep 17 00:00:00 2001
+From: Alex Zuepke <alex.zuepke@minervasys.tech>
+Date: Tue, 19 Nov 2024 18:32:04 +0100
+Subject: [PATCH 2/3] Jailhouse: unconditionally enable EL1 access to DSU
+ control registers
+
+When compiling without VHE, we must unconditionally enable EL1 access
+to DSU control registers for the kernel to work.
+
+Signed-off-by: Alex Zuepke <alex.zuepke@minervasys.tech>
+---
+ kernel-5.10/arch/arm64/kernel/head.S | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/kernel-5.10/arch/arm64/kernel/head.S b/kernel-5.10/arch/arm64/kernel/head.S
+index 351ee64c7..cb76bc973 100644
+--- a/kernel-5.10/arch/arm64/kernel/head.S
++++ b/kernel-5.10/arch/arm64/kernel/head.S
+@@ -503,6 +503,15 @@ SYM_FUNC_START(el2_setup)
+ 1:	mov_q	x0, (SCTLR_EL2_RES1 | ENDIAN_SET_EL2)
+ 	msr	sctlr_el2, x0
+ 
++	/*
++	 * Set ACTLR extra bits: ACTLREN + ECTLREN, CLUSTERPMUEN + SMEN + TSIDEN
++	 * This grants EL1 access to the DSU PMU and cluster registers.
++	 */
++	mov_q	x0, (0x0001 | 0x0002 | 0x0400 | 0x0800 | 0x1000)
++	mrs	x2, actlr_el2
++	orr	x0, x2, x0
++	msr	actlr_el2, x0
++
+ #ifdef CONFIG_ARM64_VHE
+ 	/*
+ 	 * Check for VHE being present. For the rest of the EL2 setup,
+-- 
+2.34.1
+

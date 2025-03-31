@@ -1,0 +1,52 @@
+From bcc21239f5f6983e8d8d3fb440a448b7e911b324 Mon Sep 17 00:00:00 2001
+From: Alex Zuepke <alex.zuepke@minervasys.tech>
+Date: Tue, 19 Nov 2024 20:15:20 +0100
+Subject: [PATCH 3/3] Nvidia I2C drivers: make symbols private
+
+When compiling a kernel without modules, the I2C drivers cause
+a linker conflict "symbol alternating_exposure_cfg_size redefined".
+
+Signed-off-by: Alex Zuepke <alex.zuepke@minervasys.tech>
+---
+ nvidia/drivers/media/i2c/nv_ar0234.c   | 2 +-
+ nvidia/drivers/media/i2c/nv_hawk_owl.c | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/nvidia/drivers/media/i2c/nv_ar0234.c b/nvidia/drivers/media/i2c/nv_ar0234.c
+index fd1d93372..d89e9e3a3 100644
+--- a/nvidia/drivers/media/i2c/nv_ar0234.c
++++ b/nvidia/drivers/media/i2c/nv_ar0234.c
+@@ -75,7 +75,7 @@ static const u32 ctrl_cid_list[] = {
+ 	TEGRA_CAMERA_CID_ALTERNATING_EXPOSURE,
+ };
+ 
+-const u16 alternating_exposure_cfg_size = sizeof(struct alternating_exposure_cfg);
++static const u16 alternating_exposure_cfg_size = sizeof(struct alternating_exposure_cfg);
+ 
+ // Coefficients as per distortion model (wide FOV) being used
+ typedef struct
+diff --git a/nvidia/drivers/media/i2c/nv_hawk_owl.c b/nvidia/drivers/media/i2c/nv_hawk_owl.c
+index a47269c82..a3c5b111c 100644
+--- a/nvidia/drivers/media/i2c/nv_hawk_owl.c
++++ b/nvidia/drivers/media/i2c/nv_hawk_owl.c
+@@ -84,7 +84,7 @@ static const u32 ctrl_cid_list[] = {
+ 	TEGRA_CAMERA_CID_ALTERNATING_EXPOSURE,
+ };
+ 
+-const u16 alternating_exposure_cfg_size = sizeof(struct alternating_exposure_cfg);
++static const u16 alternating_exposure_cfg_size = sizeof(struct alternating_exposure_cfg);
+ 
+ // Coefficients as per distortion model (wide FOV) being used
+ typedef struct
+@@ -1654,7 +1654,7 @@ static int ar0234_probe(struct i2c_client *client,
+ 		goto un_register;
+ 	}
+ 	msleep(100);
+-	
++
+ 	/* Deser/ser programming */
+ 	err = ar0234_hawk_owl_deser_ser_program(priv);
+ 	if (err) {
+-- 
+2.34.1
+
