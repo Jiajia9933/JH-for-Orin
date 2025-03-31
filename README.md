@@ -1,3 +1,37 @@
+# Introduction
+
+
+This repository provides Linux kernel configurations and patches for porting the Jailhouse bare-metal hypervisor to the [NVIDIA Jetson AGX Orin](https://www.nvidia.com/de-de/autonomous-machines/embedded-systems/jetson-orin/) platform with Armv8-A architecture. Jailhouse is a lightweight virtual machine monitor (VMM) that enables static partitioning-based virtualization, allowing Linux to act as a root cell while running other guest systems in fully isolated hardware regions.
+
+In this project, experiments were conducted to evaluate cache partitioning techniques (set and way partitioning) on the Orin platform (see Experiment-branch). [Benchmarks](https://gitlab.com/rt-bench/rt-bench) from the SD-VBS suite were used to measure real-time performance under different interference workloads, demonstrating how cache isolation via Jailhouse and the DSU hardware improves execution time stability and reduces inter-core interference.
+
+
+
+# References
+- Institute: TUM - [Institute for Cyber-Physical Systems in Production Engineering](https://www.mec.ed.tum.de/en/cps/home/)
+
+- The "jailhouse" and "jailhouse-documentation" are forked from the [Minervasys](https://github.com/Minervasys).
+
+- Hardware plattform: [Nvidia Jetson AGX Orin Developer Kit](https://developer.nvidia.com/embedded/learn/get-started-jetson-agx-orin-devkit)
+
+- Kernel customization: https://docs.nvidia.com/jetson/archives/r35.5.0/DeveloperGuide/SD/Kernel.html
+
+- Cortex-A78AE: https://developer.arm.com/Processors/Cortex-A78AE 
+
+- Useful ARM documents: https://www.arm.com/architecture/learn-the-architecture/a-profile
+
+- The Jetson Linux Toolchain: https://docs.nvidia.com/jetson/archives/r36.2/DeveloperGuide/AT/JetsonLinuxToolchain.html#at-jetsonlinuxtoolchain
+
+- The Driver Package: https://developer.nvidia.com/embedded/jetson-linux
+
+- Jetpack 5.1.4: https://developer.nvidia.com/embedded/jetpack-sdk-514
+
+- Cuda 11.4: https://developer.nvidia.com/cuda-11-4-4-download-archive?target_os=Linux&target_arch=arm64-sbsa&Compilation=Native&Distribution=Ubuntu&target_version=20.04&target_type=runfile_local
+
+- Pytorch v1.14.0: https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048
+
+
+
 # To compile the kernel
 
 ### 1. Add jailhouse enabling patches to the kernel
